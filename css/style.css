@@ -207,7 +207,7 @@ textarea {
 
 .hero {
   position: relative;
-  min-height: 660px;
+  min-height: 720px;
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -289,8 +289,8 @@ textarea {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2.35rem;
   align-items: center;
 }
 
@@ -322,9 +322,9 @@ h3 {
 }
 
 h1 {
-  max-width: 780px;
+  max-width: none;
   color: var(--white);
-  font-size: clamp(3.2rem, 8vw, 6.8rem);
+  font-size: clamp(3.3rem, 5.15vw, 5.35rem);
   overflow-wrap: break-word;
   text-shadow: 0 0 34px rgba(250, 174, 123, 0.22);
   text-wrap: balance;
@@ -349,10 +349,26 @@ h3 {
 }
 
 .hero-subheading {
-  max-width: 680px;
+  max-width: 880px;
   margin: 1.35rem 0 0;
   color: rgba(244, 240, 249, 0.84);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.platform-line {
+  display: inline-flex;
+  max-width: 100%;
+  margin: 1rem 0 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(250, 174, 123, 0.28);
+  border-radius: 999px;
+  color: rgba(244, 240, 249, 0.88);
+  background: rgba(244, 240, 249, 0.07);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .hero-actions {
@@ -368,6 +384,8 @@ h3 {
 }
 
 .hero-panel,
+.hero-system,
+.system-card,
 .audit-list,
 .pricing-card,
 .step-card,
@@ -433,6 +451,74 @@ h3 {
   font-size: 0.72rem;
 }
 
+.hero-system {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(320px, 1.4fr) minmax(220px, 0.9fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-color: rgba(250, 174, 123, 0.22);
+  background:
+    linear-gradient(145deg, rgba(244, 240, 249, 0.12), rgba(28, 15, 46, 0.28)),
+    repeating-linear-gradient(90deg, transparent 0 56px, rgba(250, 174, 123, 0.055) 57px 58px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 26px 72px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.system-card {
+  min-height: 178px;
+  padding: 1.2rem;
+  border-color: rgba(244, 240, 249, 0.16);
+  background:
+    linear-gradient(160deg, rgba(244, 240, 249, 0.14), rgba(250, 174, 123, 0.08));
+  box-shadow: none;
+}
+
+.system-card span {
+  display: block;
+  color: var(--peach);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.system-card p {
+  margin: 0.85rem 0 0;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.tool-constellation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  align-content: center;
+}
+
+.tool-constellation span {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(250, 174, 123, 0.28);
+  border-radius: 8px;
+  color: var(--lavender);
+  background: rgba(28, 15, 46, 0.36);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tool-constellation span:nth-child(3),
+.tool-constellation span:nth-child(7) {
+  color: var(--dark);
+  background: var(--peach);
+}
+
 .about-grid,
 .audit-grid,
 .form-grid,
@@ -482,6 +568,10 @@ h3 {
   margin-bottom: 2rem;
 }
 
+.flow-heading {
+  max-width: none;
+}
+
 .section-heading::after {
   content: "";
   display: block;
@@ -493,6 +583,17 @@ h3 {
 
 .section-heading h2 + p {
   margin-top: 1rem;
+}
+
+@media (min-width: 1100px) {
+  h1,
+  .flow-heading h2 {
+    white-space: nowrap;
+  }
+
+  .flow-heading h2 {
+    font-size: clamp(3rem, 4.6vw, 4.7rem);
+  }
 }
 
 .steps-grid {
@@ -797,6 +898,14 @@ address {
     grid-template-columns: 1fr;
   }
 
+  .hero-system {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-constellation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .portrait-card {
     position: static;
     max-width: 420px;
@@ -840,6 +949,20 @@ address {
   h1 {
     font-size: 2.85rem;
     line-height: 1.08;
+  }
+
+  .platform-line {
+    display: flex;
+    border-radius: 8px;
+    font-size: 0.74rem;
+  }
+
+  .tool-constellation {
+    grid-template-columns: 1fr;
+  }
+
+  .system-card {
+    min-height: auto;
   }
 
   .hero-panel {
