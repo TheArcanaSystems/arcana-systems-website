@@ -655,7 +655,7 @@ h3 {
 }
 
 .section-copy p:not(.eyebrow),
-.brand-card p,
+.about-portrait figcaption,
 .pricing-card p,
 .form-note,
 address {
@@ -671,7 +671,7 @@ address {
   align-items: center;
 }
 
-.brand-card,
+.about-portrait,
 .pricing-card,
 .audit-form,
 .path-grid article {
@@ -681,16 +681,21 @@ address {
   box-shadow: 0 20px 54px rgba(28, 15, 46, 0.09);
 }
 
-.brand-card {
+.about-portrait {
   padding: 1.2rem;
+  margin: 0;
 }
 
-.brand-card img {
+.about-portrait img {
   width: min(360px, 100%);
+  aspect-ratio: 1;
   margin-inline: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: top center;
 }
 
-.brand-card p {
+.about-portrait figcaption {
   margin: 1rem 0 0;
   text-align: center;
 }
