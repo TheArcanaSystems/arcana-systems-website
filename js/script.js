@@ -138,11 +138,11 @@ if (auditForm) {
       }
 
       auditForm.reset();
-      setStatus("Your intake was sent to the TAS CRM. Please check your email for the Discovery Call booking link and next steps.", "success");
+      setStatus("Your intake was sent to the TAS CRM. Opening your TAS booking link now.", "success");
 
-      if (result.calendly_url) {
+      if (result.booking_url) {
         window.setTimeout(() => {
-          window.location.href = result.calendly_url;
+          window.location.href = result.booking_url;
         }, 900);
       }
     } catch (error) {
