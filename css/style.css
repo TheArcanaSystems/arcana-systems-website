@@ -521,7 +521,161 @@ address {
   max-width: 940px;
   margin-inline: auto;
   padding: clamp(2rem, 5vw, 4rem);
+}
+
+.intake-heading {
+  max-width: 760px;
+  margin: 0 auto 2rem;
   text-align: center;
+}
+
+.audit-form {
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+.field-row,
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.audit-form label,
+.service-options legend {
+  color: var(--ivory);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.audit-form label span {
+  color: var(--soft-gold);
+}
+
+.audit-form input,
+.audit-form select,
+.audit-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.8rem 0.95rem;
+  color: var(--ivory);
+  border: 1px solid rgba(212, 161, 93, 0.28);
+  border-radius: 8px;
+  background: rgba(7, 5, 11, 0.48);
+  box-shadow: inset 0 1px 0 rgba(248, 244, 240, 0.06);
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.audit-form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.audit-form select {
+  color-scheme: dark;
+}
+
+.audit-form input:focus,
+.audit-form select:focus,
+.audit-form textarea:focus {
+  border-color: rgba(240, 201, 135, 0.82);
+  background: rgba(7, 5, 11, 0.68);
+  box-shadow: 0 0 0 3px rgba(212, 161, 93, 0.13), 0 0 28px rgba(181, 142, 255, 0.12);
+}
+
+.audit-form .is-invalid {
+  border-color: #ff9f9f;
+  box-shadow: 0 0 0 3px rgba(255, 159, 159, 0.16);
+}
+
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(212, 161, 93, 0.22);
+  border-radius: 8px;
+  background: rgba(7, 5, 11, 0.25);
+}
+
+.service-options legend {
+  padding: 0 0.4rem;
+}
+
+.service-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--muted-lavender);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.service-options input {
+  width: 1rem;
+  height: 1rem;
+  min-height: 0;
+  margin-top: 0.18rem;
+  accent-color: var(--soft-gold);
+}
+
+.audit-form .btn {
+  justify-self: center;
+  min-width: min(100%, 260px);
+  margin-top: 0.5rem;
+}
+
+.audit-form .btn:disabled {
+  cursor: wait;
+  opacity: 0.65;
+  transform: none;
+}
+
+.form-status,
+.field-error {
+  margin: 0;
+}
+
+.form-status {
+  min-height: 1.6rem;
+  color: var(--muted-lavender);
+  text-align: center;
+}
+
+.form-status.show {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+}
+
+.form-status.success {
+  color: #f8f4f0;
+  border: 1px solid rgba(240, 201, 135, 0.42);
+  background: rgba(212, 161, 93, 0.12);
+}
+
+.form-status.error,
+.field-error {
+  color: #ffd1d1;
+}
+
+.form-status.error {
+  border: 1px solid rgba(255, 159, 159, 0.38);
+  background: rgba(115, 36, 58, 0.2);
+}
+
+.field-error {
+  font-size: 0.82rem;
 }
 
 .contact-section a {
@@ -617,7 +771,9 @@ address {
   }
 
   .split .method-grid,
-  .private-offers > div {
+  .private-offers > div,
+  .two-column,
+  .service-options {
     grid-template-columns: 1fr;
   }
 

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260613-complete-arcana">
+  <link rel="stylesheet" href="css/style.css?v=20260614-crm-intake">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -236,10 +236,91 @@
 
     <section id="audit-intake" class="section final-cta">
       <div class="container final-cta-panel">
-        <p class="eyebrow">Ready to build something that actually works?</p>
-        <h2>Start with the Arcana Audit&trade; and walk away with a clear map.</h2>
-        <p>Tell us what feels messy, manual, repetitive, or hard to hand off. We will help you find the architecture underneath the friction.</p>
-        <a class="btn btn-gold" href="mailto:discovery@thearcanasystems.com?subject=Arcana%20Audit%20Inquiry">Start Your Audit</a>
+        <div class="intake-heading">
+          <p class="eyebrow">Ready to build something that actually works?</p>
+          <h2>Start with the Arcana Audit&trade; and walk away with a clear map.</h2>
+          <p>Tell us what feels messy, manual, repetitive, or hard to hand off. Your intake goes straight into the TAS CRM so we can review the friction before your Discovery Call.</p>
+        </div>
+        <form id="audit-form" class="audit-form" action="https://crm.thearcanasystems.com/api/intake" method="post" novalidate>
+          <input type="hidden" name="source" value="Website intake">
+          <div class="field-row">
+            <label for="company-name">Business name <span aria-hidden="true">*</span></label>
+            <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field-row two-column">
+            <div class="field">
+              <label for="contact-name">Your name <span aria-hidden="true">*</span></label>
+              <input id="contact-name" name="contact_name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+              <input id="contact-email" name="contact_email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field-row two-column">
+            <div class="field">
+              <label for="contact-phone">Phone</label>
+              <input id="contact-phone" name="contact_phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="industry">Industry</label>
+              <input id="industry" name="industry" type="text" autocomplete="organization-title">
+            </div>
+          </div>
+          <div class="field-row two-column">
+            <div class="field">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>Immediately</option>
+                <option>Next 30 days</option>
+                <option>Next 60-90 days</option>
+                <option>Exploring options</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="budget-range">Budget range</label>
+              <select id="budget-range" name="budget_range">
+                <option value="">Select one</option>
+                <option>Arcana Audit - $497</option>
+                <option>$4,500-$8,500 Build</option>
+                <option>$9,500-$15,000+ Operating System</option>
+                <option>Monthly stewardship</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="service-options">
+            <legend>What do you need help with?</legend>
+            <label><input type="checkbox" name="services_needed" value="Systems strategy"> Systems strategy</label>
+            <label><input type="checkbox" name="services_needed" value="Operational architecture"> Operational architecture</label>
+            <label><input type="checkbox" name="services_needed" value="Automation and integration"> Automation and integration</label>
+            <label><input type="checkbox" name="services_needed" value="Client portals and dashboards"> Client portals and dashboards</label>
+          </fieldset>
+          <div class="field-row">
+            <label for="current-systems">What tools or systems are you using now?</label>
+            <textarea id="current-systems" name="current_systems" rows="3"></textarea>
+          </div>
+          <div class="field-row">
+            <label for="biggest-bottleneck">What feels the messiest, most manual, or hardest to hand off?</label>
+            <textarea id="biggest-bottleneck" name="biggest_bottleneck" rows="4"></textarea>
+          </div>
+          <div class="field-row">
+            <label for="goals">What would you like the system to make possible?</label>
+            <textarea id="goals" name="goals" rows="3"></textarea>
+          </div>
+          <div class="field-row two-column">
+            <div class="field">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="url" autocomplete="url" placeholder="https://">
+            </div>
+            <div class="field">
+              <label for="referral-source">How did you find TAS?</label>
+              <input id="referral-source" name="referral_source" type="text">
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit">Start Your Audit <span aria-hidden="true">&#10022;</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -262,6 +343,6 @@
     <p>Copyright &copy; 2026. Building systems that move like magic.</p>
   </footer>
 
-  <script src="js/script.js?v=20260613-complete-arcana"></script>
+  <script src="js/script.js?v=20260614-crm-intake"></script>
 </body>
 </html>

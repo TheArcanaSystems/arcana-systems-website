@@ -3,6 +3,7 @@ const siteNav = document.querySelector(".site-nav");
 const auditForm = document.querySelector("#audit-form");
 const formStatus = document.querySelector(".form-status");
 const stardustCanvas = document.querySelector("#stardust-canvas");
+const crmIntakeEndpoint = "https://crm.thearcanasystems.com/api/intake";
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
@@ -34,9 +35,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 const requiredFields = [
-  { id: "full-name", message: "Please enter your full name." },
-  { id: "business-name", message: "Please enter your business name." },
-  { id: "email", message: "Please enter a valid email address." },
+  { id: "company-name", message: "Please enter your business name." },
+  { id: "contact-name", message: "Please enter your name." },
+  { id: "contact-email", message: "Please enter a valid email address." },
 ];
 
 function setStatus(message, type) {
@@ -83,6 +84,26 @@ function validateForm(form) {
   return isValid;
 }
 
+function getFormPayload(form) {
+  const formData = new FormData(form);
+  const payload = {};
+
+  formData.forEach((value, key) => {
+    const cleanValue = typeof value === "string" ? value.trim() : value;
+    if (!cleanValue) return;
+
+    if (key === "services_needed") {
+      payload.services_needed = payload.services_needed || [];
+      payload.services_needed.push(cleanValue);
+      return;
+    }
+
+    payload[key] = cleanValue;
+  });
+
+  return payload;
+}
+
 if (auditForm) {
   auditForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -101,20 +122,31 @@ if (auditForm) {
     }
 
     try {
-      const response = await fetch(auditForm.action, {
+      const response = await fetch(auditForm.action || crmIntakeEndpoint, {
         method: "POST",
-        body: new FormData(auditForm),
-        headers: { Accept: "application/json" },
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(getFormPayload(auditForm)),
       });
 
+      const result = await response.json().catch(() => ({}));
+
       if (!response.ok) {
-        throw new Error("Form submission failed");
+        throw new Error(result.error || "Form submission failed");
       }
 
       auditForm.reset();
-      setStatus("Thank you. Your Arcana Audit intake has been received. Next steps: you will receive the discovery invoice and booking link by email.", "success");
+      setStatus("Your intake was sent to the TAS CRM. Please check your email for the Discovery Call booking link and next steps.", "success");
+
+      if (result.calendly_url) {
+        window.setTimeout(() => {
+          window.location.href = result.calendly_url;
+        }, 900);
+      }
     } catch (error) {
-      setStatus("Something went wrong while submitting. Please email discovery@thearcanasystems.com and we will take it from there.", "error");
+      setStatus(error.message || "Something went wrong while submitting. Please email discovery@thearcanasystems.com and we will take it from there.", "error");
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
