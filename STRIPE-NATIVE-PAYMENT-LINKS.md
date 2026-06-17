@@ -7,6 +7,13 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 | Offer | Price | Clean native Stripe link |
 | --- | ---: | --- |
 | CEO Command Center Dashboard | $147 | https://buy.stripe.com/6oU3cw4vO6c732p1rx0gw00 |
+| Client Portal OS Template | $197 | https://buy.stripe.com/bJe28s7I09oj9qN3zF0gw02 |
+
+## Received But Needs Stripe Correction
+
+| Link | Issue |
+| --- | --- |
+| https://buy.stripe.com/4gM9AUfas6c7auR1rx0gw01 | Checkout is priced/described like the Invoice & Payment Automation Kit at $247, but the visible Stripe product title says "AI SOP Builder: Prompt Pack." Fix the product/payment link title in Stripe before publishing this link on the website. |
 
 ## Remaining
 
@@ -21,12 +28,6 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 - Price: $247
 - Unit label: Kit
 - Description: A complete automated billing blueprint for service businesses. Shows how to connect contract signatures to Stripe payment links, automated invoice delivery, paid status sync, and overdue reminders, with an implementation checklist.
-
-### Client Portal OS Template
-
-- Price: $197
-- Unit label: Template
-- Description: A comprehensive client delivery workspace for managing onboarding, delivery, assets, tasks, status, and client handoff. Designed for consultants, agencies, and service providers using Notion, SharePoint, or a similar workspace.
 
 ### SOP Snap Kit
 
@@ -46,6 +47,5 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 | --- | --- |
 | Systems Clarity Intensive | https://buy.stripe.com/00wdR94qEdY29yi21kdZ600 |
 | Invoice & Payment Automation Kit | https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605 |
-| Client Portal OS Template | https://buy.stripe.com/3cI28r4qE4ns5i28pIdZ601 |
 | SOP Snap Kit | https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603 |
 | AI SOP Builder Prompt Pack | https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604 |
