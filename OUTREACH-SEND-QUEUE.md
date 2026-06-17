@@ -5,7 +5,7 @@ Use this as the immediate send queue. Replace bracketed fields only.
 ## Primary Link
 
 Systems Clarity Intensive:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+https://thearcanasystems.com/#pricing
 
 ## Send Block 1: 25 Warm DMs
 
@@ -18,8 +18,8 @@ I am booking Systems Clarity Intensives now. It is a 90-minute audit that gives 
 
 If you know anyone whose business is growing but their backend is getting messy, would you be open to sending them my way?
 
-Here is the checkout link in case it is useful:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Here is the website link in case it is useful:
+https://thearcanasystems.com/#pricing
 ```
 
 ## Send Block 2: 10 Direct Prospect Emails
@@ -41,8 +41,8 @@ If your operations feel like they are running on you instead of on a system, the
 
 In 90 minutes, we map the bottlenecks, identify the highest-impact workflows to fix, and create a prioritized roadmap. You walk away with clarity, not homework.
 
-The intensive is $997 and checkout is here:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+The intensive is $997 and the website is here:
+https://thearcanasystems.com/#pricing
 
 Want me to send the overview?
 
@@ -58,8 +58,8 @@ If your workflows are duct-taped together, your SOPs live in someone's head, or 
 
 Start with the Systems Clarity Intensive: a 90-minute audit that gives you a clear roadmap for what to fix first.
 
-Book here:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Start here:
+https://thearcanasystems.com/#pricing
 ```
 
 ## Send Block 4: Follow-Up After Any Reply
@@ -71,8 +71,8 @@ The cleanest starting point is the Systems Clarity Intensive. It is a 90-minute 
 
 You leave with a Systems Gap Report and a prioritized roadmap, whether or not we do a build together afterward.
 
-The intensive is $997 and you can book here:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+The intensive is $997 and you can start here:
+https://thearcanasystems.com/#pricing
 
 Happy to answer any questions before you book.
 ```

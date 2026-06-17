@@ -3,7 +3,7 @@
 Use LinkedIn for warm, human, low-volume outreach. Do not bulk blast. Send 5-10 thoughtful messages per day, reply quickly, and optimize for conversations.
 
 Primary CTA:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+https://thearcanasystems.com/#pricing
 
 ## Search Strategy
 
@@ -40,8 +40,8 @@ I thought of you because founder-led businesses usually hit a point where growth
 
 The starting point is a Systems Clarity Intensive: a 90-minute audit where we map bottlenecks, identify what is too manual, and create a prioritized roadmap for what to fix first.
 
-If that would be useful, here is the booking link:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+If that would be useful, here is the website link:
+https://thearcanasystems.com/#pricing
 
 No pressure either way. I mostly wanted to put it on your radar.
 ```
@@ -56,7 +56,7 @@ The best fit is a founder whose business is growing but whose backend still depe
 If anyone comes to mind, I would be grateful for an intro.
 
 The starting offer is the Systems Clarity Intensive:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+https://thearcanasystems.com/#pricing
 ```
 
 ## First Batch Recommendation

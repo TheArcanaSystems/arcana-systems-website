@@ -1,27 +1,28 @@
 # The Arcana Systems Launch Command Center
 
-Use this today. The goal is simple: publish the checkout links, ask real people directly, and make the first sale.
+Use this today. The goal is simple: publish the website links, ask real people directly, and make the first sale.
 
-## Live Checkout Links
+## Public Website Offer Link
 
 | Offer | Price | Link |
 | --- | ---: | --- |
-| Systems Clarity Intensive | $997 | https://buy.stripe.com/00wdR94qEdY29yi21kdZ600 |
-| Invoice & Payment Automation Kit | $247 | https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605 |
-| Client Portal OS Template | $197 | https://buy.stripe.com/3cI28r4qE4ns5i28pIdZ601 |
-| CEO Command Center Dashboard | $147 | https://buy.stripe.com/7sYeVd3mAf265i249sdZ602 |
-| SOP Snap Kit | $97 | https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603 |
-| AI SOP Builder Prompt Pack | $47 | https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604 |
+| Systems Clarity Intensive | $997 | https://thearcanasystems.com/#pricing |
+| Invoice & Payment Automation Kit | $247 | https://thearcanasystems.com/#pricing |
+| Client Portal OS Template | $197 | https://thearcanasystems.com/#pricing |
+| CEO Command Center Dashboard | $147 | https://thearcanasystems.com/#pricing |
+| SOP Snap Kit | $97 | https://thearcanasystems.com/#pricing |
+| AI SOP Builder Prompt Pack | $47 | https://thearcanasystems.com/#pricing |
 
 ## 45-Minute Money Path QA
 
-Before sending traffic, open each link in a private browser window and confirm:
+Before sending traffic, open the website offer link in a private browser window and confirm:
 
-- Product name is correct.
-- Price is correct.
-- Checkout is in live mode.
-- Buyer email field appears.
-- Success/confirmation page makes sense.
+- The page opens to the offer/pricing section.
+- Every product name is correct.
+- Every price is correct.
+- Each website button routes to the correct live Stripe checkout.
+- Buyer email fields appear in Stripe after clicking through.
+- Success/confirmation pages make sense.
 - You know what the buyer receives after purchase.
 - You have a manual fulfillment fallback for every offer.
 
@@ -33,7 +34,7 @@ Manual fulfillment fallback:
 
 ## Today's Execution Order
 
-1. Update website with the live checkout suite.
+1. Update website with the live offer suite.
 2. Add the Systems Clarity Intensive link to every bio/profile that allows one link.
 3. Post the launch announcement on LinkedIn, Facebook, Instagram, and Threads.
 4. Send 25 direct messages to warm contacts.
@@ -84,7 +85,7 @@ I also released a set of ready-to-use systems assets:
 
 If your business is growing but the backend feels heavier every month, this is where we clean it up.
 
-Start here: https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Start here: https://thearcanasystems.com/#pricing
 
 ## Short Social Post
 
@@ -94,7 +95,7 @@ If your workflows are duct-taped together, your SOPs live in someone's head, or 
 
 Start with the Systems Clarity Intensive: a 90-minute audit that gives you a clear roadmap for what to fix first.
 
-Book here: https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Start here: https://thearcanasystems.com/#pricing
 
 ## Warm DM Script
 
@@ -104,7 +105,7 @@ I am booking Systems Clarity Intensives now. It is a 90-minute audit that gives 
 
 If you know anyone whose business is growing but their backend is getting messy, would you be open to sending them my way?
 
-Here is the checkout link in case it is useful: https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Here is the website link in case it is useful: https://thearcanasystems.com/#pricing
 
 ## Cold Email: Founder Trap
 
@@ -123,7 +124,7 @@ At The Arcana Systems, I help founder-led service businesses clean up the backen
 The best starting point is the Systems Clarity Intensive: a 90-minute audit that produces a Systems Gap Report and prioritized roadmap.
 
 It is $997 and you can book here:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+https://thearcanasystems.com/#pricing
 
 If this resonates, I am happy to answer questions first.
 
@@ -145,8 +146,8 @@ If your operations feel like they are running on you instead of on a system, the
 
 In 90 minutes, we map the bottlenecks, identify the highest-impact workflows to fix, and create a prioritized roadmap. You walk away with clarity, not homework.
 
-The intensive is $997 and checkout is here:
-https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+The intensive is $997 and the website is here:
+https://thearcanasystems.com/#pricing
 
 Want me to send the overview?
 
@@ -160,7 +161,7 @@ I just opened paid bookings for a Systems Clarity Intensive. It is a 90-minute b
 
 If your workflows, client handoffs, invoices, SOPs, or dashboards feel heavier than they should, this would be a strong fit.
 
-The intensive is $997 and checkout is here: https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+The intensive is $997 and the website is here: https://thearcanasystems.com/#pricing
 
 No pressure either way. I just wanted to put it on your radar because this is exactly the kind of operational cleanup that can free up a lot of founder time.
 
@@ -178,7 +179,7 @@ The best starting point is the Systems Clarity Intensive. It is a 90-minute proc
 
 If you know a founder, consultant, agency owner, coach, or small business owner whose backend is starting to feel messy, I would be grateful for an introduction.
 
-Booking link: https://buy.stripe.com/00wdR94qEdY29yi21kdZ600
+Website link: https://thearcanasystems.com/#pricing
 
 Thank you for cheering this on.
 
