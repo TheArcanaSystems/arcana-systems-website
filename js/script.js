@@ -35,6 +35,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 const requiredFields = [
+  { id: "offer-interest", message: "Please choose what you want to book or buy." },
   { id: "company-name", message: "Please enter your business name." },
   { id: "contact-name", message: "Please enter your name." },
   { id: "contact-email", message: "Please enter a valid email address." },
@@ -70,7 +71,7 @@ function validateForm(form) {
 
   requiredFields.forEach(({ id, message }) => {
     const field = form.querySelector(`#${id}`);
-    if (!(field instanceof HTMLInputElement)) return;
+    if (!(field instanceof HTMLInputElement) && !(field instanceof HTMLSelectElement)) return;
 
     const value = field.value.trim();
     const invalidEmail = field.type === "email" && value && !field.validity.valid;

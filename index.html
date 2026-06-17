@@ -182,7 +182,7 @@
         <div class="section-heading">
           <p class="eyebrow">Book &amp; Buy</p>
           <h2>Choose the system support you need right now.</h2>
-          <p>Start with a strategic intensive, or grab a ready-to-use operating asset you can implement immediately. Every option begins here on The Arcana Systems website.</p>
+          <p>Start with a strategic intensive, or request access to a ready-to-use operating asset. Every option begins here on The Arcana Systems website.</p>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card featured">
@@ -191,7 +191,7 @@
             <p class="price">$997</p>
             <p><strong>Best for:</strong> Founders who need a fast, expert read on what is broken, what to fix first, and how to stop carrying every process in their head.</p>
             <ul><li>90-minute process audit</li><li>Bottleneck detection</li><li>Workflow mapping</li><li>Custom Systems Gap Report</li><li>Prioritized implementation roadmap</li></ul>
-            <a class="btn btn-gold" href="https://buy.stripe.com/00wdR94qEdY29yi21kdZ600">Continue to Secure Payment</a>
+            <a class="btn btn-gold" href="#audit-intake">Request the Intensive</a>
           </article>
           <article class="pricing-card">
             <p class="tier">Automation Blueprint</p>
@@ -199,7 +199,7 @@
             <p class="price">$247</p>
             <p><strong>Best for:</strong> Service businesses that need contract signatures, Stripe payment links, invoice delivery, paid status sync, and overdue reminders to work together.</p>
             <ul><li>Billing workflow blueprint</li><li>Contract-to-payment flow</li><li>Invoice and reminder logic</li><li>Implementation checklist</li></ul>
-            <a class="btn btn-ghost" href="https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605">Secure Checkout</a>
+            <a class="btn btn-ghost" href="#audit-intake">Request Access</a>
           </article>
           <article class="pricing-card">
             <p class="tier">Client Delivery</p>
@@ -207,16 +207,16 @@
             <p class="price">$197</p>
             <p><strong>Best for:</strong> Consultants, agencies, and service providers who need a clean client success workspace for onboarding, delivery, assets, tasks, and status.</p>
             <ul><li>Multi-database portal structure</li><li>Delivery lifecycle workspace</li><li>Notion or SharePoint implementation path</li><li>Client handoff structure</li></ul>
-            <a class="btn btn-ghost" href="https://buy.stripe.com/3cI28r4qE4ns5i28pIdZ601">Secure Checkout</a>
+            <a class="btn btn-ghost" href="#audit-intake">Request Access</a>
           </article>
         </div>
         <div class="private-offers product-suite">
           <h3>More ready-to-use systems</h3>
           <div>
-            <article><strong>CEO Command Center Dashboard</strong><span>$147</span><p>A single-pane operating cockpit for sales pipeline, project health, team utilization, and monthly cash flow.</p><a href="https://buy.stripe.com/7sYeVd3mAf265i249sdZ602">Secure checkout</a></article>
-            <article><strong>SOP Snap Kit</strong><span>$97</span><p>Pre-built business process templates, including the gold-standard SOP layout and New Client Onboarding SOP.</p><a href="https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603">Secure checkout</a></article>
-            <article><strong>AI SOP Builder Prompt Pack</strong><span>$47</span><p>Advanced LLM prompts that turn messy recordings, transcripts, and notes into professional SOPs.</p><a href="https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604">Secure checkout</a></article>
-            <article><strong>Need the build done for you?</strong><span>Custom Quote</span><p>Start with the Systems Clarity Intensive, then use the roadmap to scope a focused implementation.</p><a href="https://buy.stripe.com/00wdR94qEdY29yi21kdZ600">Start with the intensive</a></article>
+            <article><strong>CEO Command Center Dashboard</strong><span>$147</span><p>A single-pane operating cockpit for sales pipeline, project health, team utilization, and monthly cash flow.</p><a href="#audit-intake">Request access</a></article>
+            <article><strong>SOP Snap Kit</strong><span>$97</span><p>Pre-built business process templates, including the gold-standard SOP layout and New Client Onboarding SOP.</p><a href="#audit-intake">Request access</a></article>
+            <article><strong>AI SOP Builder Prompt Pack</strong><span>$47</span><p>Advanced LLM prompts that turn messy recordings, transcripts, and notes into professional SOPs.</p><a href="#audit-intake">Request access</a></article>
+            <article><strong>Need the build done for you?</strong><span>Custom Quote</span><p>Start with the Systems Clarity Intensive, then use the roadmap to scope a focused implementation.</p><a href="#audit-intake">Start with the intensive</a></article>
           </div>
         </div>
       </div>
@@ -242,10 +242,23 @@
         <div class="intake-heading">
           <p class="eyebrow">Ready to build something that actually works?</p>
           <h2>Start with the Systems Clarity Intensive and walk away with a clear map.</h2>
-          <p>Tell us what feels messy, manual, repetitive, or hard to hand off. Your intake goes straight into the TAS CRM so we can review the friction before your Discovery Call.</p>
+          <p>Tell us what you want to book or buy, and what feels messy, manual, repetitive, or hard to hand off. Your intake goes straight into the TAS CRM so we can review and send the right next step.</p>
         </div>
         <form id="audit-form" class="audit-form" action="https://crm.thearcanasystems.com/api/intake" method="post" novalidate>
           <input type="hidden" name="source" value="Website intake">
+          <div class="field-row">
+            <label for="offer-interest">What do you want to book or buy? <span aria-hidden="true">*</span></label>
+            <select id="offer-interest" name="offer_interest" required>
+              <option value="">Select one</option>
+              <option>Systems Clarity Intensive - $997</option>
+              <option>Invoice & Payment Automation Kit - $247</option>
+              <option>Client Portal OS Template - $197</option>
+              <option>CEO Command Center Dashboard - $147</option>
+              <option>SOP Snap Kit - $97</option>
+              <option>AI SOP Builder Prompt Pack - $47</option>
+              <option>Custom implementation quote</option>
+            </select>
+          </div>
           <div class="field-row">
             <label for="company-name">Business name <span aria-hidden="true">*</span></label>
             <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
@@ -321,7 +334,7 @@
               <input id="referral-source" name="referral_source" type="text">
             </div>
           </div>
-          <button class="btn btn-gold" type="submit">Start Your Audit <span aria-hidden="true">&#10022;</span></button>
+          <button class="btn btn-gold" type="submit">Request Next Step <span aria-hidden="true">&#10022;</span></button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
