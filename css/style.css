@@ -484,6 +484,25 @@ address {
   border-radius: 8px;
 }
 
+.product-suite article {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+}
+
+.product-suite article p {
+  margin: 0;
+}
+
+.product-suite article a {
+  justify-self: start;
+  color: var(--soft-gold);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
 .private-offers strong,
 .private-offers span {
   display: block;
