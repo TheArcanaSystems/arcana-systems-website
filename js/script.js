@@ -4,14 +4,6 @@ const auditForm = document.querySelector("#audit-form");
 const formStatus = document.querySelector(".form-status");
 const stardustCanvas = document.querySelector("#stardust-canvas");
 const crmIntakeEndpoint = "https://crm.thearcanasystems.com/api/intake";
-const checkoutLinks = {
-  "Systems Clarity Intensive - $997": "https://buy.stripe.com/00wdR94qEdY29yi21kdZ600",
-  "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605",
-  "Client Portal OS Template - $197": "https://buy.stripe.com/3cI28r4qE4ns5i28pIdZ601",
-  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/7sYeVd3mAf265i249sdZ602",
-  "SOP Snap Kit - $97": "https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603",
-  "AI SOP Builder Prompt Pack - $47": "https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604",
-};
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
@@ -156,19 +148,8 @@ if (auditForm) {
         throw new Error(result.error || "Form submission failed");
       }
 
-      const selectedOffer = auditForm.querySelector("#offer-interest");
-      const selectedOfferValue = selectedOffer instanceof HTMLSelectElement ? selectedOffer.value : "";
-      const checkoutUrl = result.booking_url || checkoutLinks[selectedOfferValue];
       auditForm.reset();
-
-      if (checkoutUrl) {
-        setStatus("Your intake was sent to the TAS CRM. Opening secure checkout now.", "success");
-        window.setTimeout(() => {
-          window.location.href = checkoutUrl;
-        }, 900);
-      } else {
-        setStatus("Your intake was sent to the TAS CRM. Caitilin will send the right next step from cnelson@thearcanasystems.com.", "success");
-      }
+      setStatus("Your inquiry was sent to the TAS CRM. Caitilin will send the right next step from cnelson@thearcanasystems.com.", "success");
     } catch (error) {
       setStatus(error.message || "Something went wrong while submitting. Please email cnelson@thearcanasystems.com and we will take it from there.", "error");
     } finally {

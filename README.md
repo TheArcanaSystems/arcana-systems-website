@@ -1,6 +1,6 @@
 # The Arcana Systems Website
 
-Production-ready static website for [thearcanasystems.com](https://thearcanasystems.com), focused on the Arcana Systems offer intake and checkout flow.
+Production-ready static website for [thearcanasystems.com](https://thearcanasystems.com), focused on The Arcana Systems offer catalog, direct checkout, and custom inquiry flow.
 
 ## Structure
 
@@ -21,9 +21,22 @@ arcana-systems-website/
 `-- wrangler.toml
 ```
 
+## Purchase And Intake Flow
+
+Productized offers link directly from the website offer cards to secure Stripe Checkout:
+
+- Systems Clarity Intensive
+- Invoice & Payment Automation Kit
+- Client Portal OS Template
+- CEO Command Center Dashboard
+- SOP Snap Kit
+- AI SOP Builder Prompt Pack
+
+The inquiry form is reserved for custom implementation quotes, buyer questions, and tailored next steps.
+
 ## TAS CRM Intake
 
-The offer intake form posts to:
+The inquiry form posts to:
 
 ```html
 https://crm.thearcanasystems.com/api/intake
@@ -36,7 +49,7 @@ Required client-side fields:
 - Contact Name
 - Email
 
-On successful submission, the page records the intake in TAS CRM and opens the matching secure Stripe checkout or booking URL.
+On successful submission, the page records the inquiry in TAS CRM and shows confirmation copy.
 
 ## Cloudflare Pages Setup
 
@@ -67,7 +80,7 @@ Then open `http://localhost:4173`.
 ## Production Checks
 
 - Verify all nav links scroll to their sections.
-- Submit a test CRM intake and confirm the success message appears.
-- Confirm the buyer is routed to the correct secure checkout or booking URL.
+- Confirm productized offer buttons route directly to the correct secure checkout URL.
+- Submit a test CRM inquiry and confirm the success message appears.
 - Run Lighthouse for accessibility, performance, best practices, and SEO.
 - Test mobile navigation at narrow widths.
