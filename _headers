@@ -1,0 +1,8 @@
+/*
+  Cache-Control: no-cache, must-revalidate
+
+/index.html
+  Cache-Control: no-store
+
+/js/script.js
+  Cache-Control: no-cache, must-revalidate
