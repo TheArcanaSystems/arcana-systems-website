@@ -1,41 +1,42 @@
 # The Arcana Systems Website
 
-Production-ready static website for [thearcanasystems.com](https://thearcanasystems.com), focused on the Arcana Audit™ intake flow.
+Production-ready static website for [thearcanasystems.com](https://thearcanasystems.com), focused on the Arcana Systems offer intake and checkout flow.
 
 ## Structure
 
 ```text
 arcana-systems-website/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   ├── arcana-systems-logo.png
-│   ├── cnelson-headshot.png
-│   ├── logo-dark.png
-│   └── logo-light.png
-├── .gitignore
-├── README.md
-└── wrangler.toml
+|-- index.html
+|-- css/
+|   `-- style.css
+|-- js/
+|   `-- script.js
+|-- images/
+|   |-- arcana-systems-logo.png
+|   |-- cnelson-headshot.png
+|   |-- logo-dark.png
+|   `-- logo-light.png
+|-- .gitignore
+|-- README.md
+`-- wrangler.toml
 ```
 
-## Formspree
+## TAS CRM Intake
 
-The Arcana Audit™ intake form posts to:
+The offer intake form posts to:
 
 ```html
-https://formspree.io/f/mkoykzab
+https://crm.thearcanasystems.com/api/intake
 ```
 
 Required client-side fields:
 
-- Full Name
+- Offer Interest
 - Business Name
+- Contact Name
 - Email
 
-On successful submission, the page displays confirmation copy with next steps for the invoice and booking link.
+On successful submission, the page records the intake in TAS CRM and opens the matching secure Stripe checkout or booking URL.
 
 ## Cloudflare Pages Setup
 
@@ -66,7 +67,7 @@ Then open `http://localhost:4173`.
 ## Production Checks
 
 - Verify all nav links scroll to their sections.
-- Submit a test Formspree entry and confirm the success message appears.
-- Confirm the email notification arrives at the configured Formspree destination.
+- Submit a test CRM intake and confirm the success message appears.
+- Confirm the buyer is routed to the correct secure checkout or booking URL.
 - Run Lighthouse for accessibility, performance, best practices, and SEO.
 - Test mobile navigation at narrow widths.
