@@ -1,13 +1,20 @@
 :root {
-  --deep-black: #07050B;
-  --midnight: #120A24;
-  --plum: #22103B;
-  --royal: #3B1F5E;
-  --lavender-glow: #B58EFF;
-  --gold: #D4A15D;
-  --soft-gold: #F0C987;
-  --ivory: #F8F4F0;
-  --muted-lavender: #CFC3E8;
+  --deep-plum: #140B22;
+  --royal-violet: #3A1F61;
+  --arcana-violet: #5B3A83;
+  --spark-gold: #C8A063;
+  --lavender-mist: #F4F0F9;
+  --ivory: #FAF6F0;
+
+  --deep-black: var(--deep-plum);
+  --midnight: var(--royal-violet);
+  --plum: var(--arcana-violet);
+  --royal: var(--royal-violet);
+  --lavender-glow: var(--lavender-mist);
+  --gold: var(--spark-gold);
+  --soft-gold: #E5C28B;
+  --muted-lavender: var(--lavender-mist);
+
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", Arial, sans-serif;
 }
