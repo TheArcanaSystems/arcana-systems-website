@@ -7,8 +7,8 @@ const crmIntakeEndpoint = "https://crm.thearcanasystems.com/api/intake";
 const directCheckoutLinks = {
   "Systems Clarity Intensive - $997": "https://buy.stripe.com/00wdR94qEdY29yi21kdZ600",
   "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605",
-  "Client Portal OS Template - $197": "https://buy.stripe.com/bJe28s7I09oj9qN3zF0gw02",
-  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/6oU3cw4vO6c732p1rx0gw00",
+  "Client Portal OS Template - $197": "https://buy.stripe.com/3cI28r4qE4ns5i28pIdZ601",
+  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/7sYeVd3mAf265i249sdZ602",
   "SOP Snap Kit - $97": "https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603",
   "AI SOP Builder Prompt Pack - $47": "https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604",
 };
