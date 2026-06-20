@@ -5,12 +5,12 @@ const formStatus = document.querySelector(".form-status");
 const stardustCanvas = document.querySelector("#stardust-canvas");
 const crmIntakeEndpoint = "https://crm.thearcanasystems.com/api/intake";
 const directCheckoutLinks = {
-  "Systems Clarity Intensive - $997": "https://buy.stripe.com/eVqbJ1aP26vA5i2eO6dZ606",
-  "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/aFa3cv5uI8DIeSC49sdZ607",
-  "Client Portal OS Template - $197": "https://buy.stripe.com/bJe28s7I09oj9qN3zF0gw02",
-  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/6oU3cw4vO6c732p1rx0gw00",
-  "SOP Snap Kit - $97": "https://buy.stripe.com/5kQ28r9KY7zE11MbBUdZ608",
-  "AI SOP Builder Prompt Pack - $47": "https://buy.stripe.com/bJedR91es07c8ue35odZ609",
+  "Systems Clarity Intensive - $997": "https://buy.stripe.com/14A6oHg9m3joh0KeO6dZ60b",
+  "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f",
+  "Client Portal OS Template - $197": "https://buy.stripe.com/7sY6oH2iw8DI6m6fSadZ60a",
+  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/28E4gz0ao9HM25Q0XgdZ60c",
+  "SOP Snap Kit - $97": "https://buy.stripe.com/9B6bJ11es4ns4dY7lEdZ60d",
+  "AI SOP Builder Prompt Pack - $47": "https://buy.stripe.com/28EeVd8GU7zE5i2gWedZ60e",
 };
 
 document.querySelectorAll("a[data-offer-target]").forEach((link) => {

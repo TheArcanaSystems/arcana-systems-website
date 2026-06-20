@@ -6,8 +6,8 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 
 | Offer | Price | Clean native Stripe link |
 | --- | ---: | --- |
-| CEO Command Center Dashboard | $147 | https://buy.stripe.com/6oU3cw4vO6c732p1rx0gw00 |
-| Client Portal OS Template | $197 | https://buy.stripe.com/bJe28s7I09oj9qN3zF0gw02 |
+| CEO Command Center Dashboard | $147 | https://buy.stripe.com/28E4gz0ao9HM25Q0XgdZ60c |
+| Client Portal OS Template | $197 | https://buy.stripe.com/7sY6oH2iw8DI6m6fSadZ60a |
 
 ## Received But Needs Stripe Correction
 
@@ -45,7 +45,7 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 
 | Offer | Current old link to replace |
 | --- | --- |
-| Systems Clarity Intensive | https://buy.stripe.com/eVqbJ1aP26vA5i2eO6dZ606 |
-| Invoice & Payment Automation Kit | https://buy.stripe.com/aFa3cv5uI8DIeSC49sdZ607 |
-| SOP Snap Kit | https://buy.stripe.com/5kQ28r9KY7zE11MbBUdZ608 |
-| AI SOP Builder Prompt Pack | https://buy.stripe.com/bJedR91es07c8ue35odZ609 |
+| Systems Clarity Intensive | https://buy.stripe.com/14A6oHg9m3joh0KeO6dZ60b |
+| Invoice & Payment Automation Kit | https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f |
+| SOP Snap Kit | https://buy.stripe.com/9B6bJ11es4ns4dY7lEdZ60d |
+| AI SOP Builder Prompt Pack | https://buy.stripe.com/28EeVd8GU7zE5i2gWedZ60e |
