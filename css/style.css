@@ -824,6 +824,27 @@ address {
   align-items: center;
 }
 
+/* Branded HTML Logo */
+.logo-brand {
+  font-family: var(--font-heading);
+  color: var(--ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  line-height: 1;
+}
+
+.logo-brand span {
+  color: #D4A15D;
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px rgba(212, 161, 93, 0.4);
+}
+
 .back-link {
   color: var(--soft-gold);
   text-decoration: none;
