@@ -45,7 +45,7 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 
 | Offer | Current old link to replace |
 | --- | --- |
-| Systems Clarity Intensive | https://buy.stripe.com/00wdR94qEdY29yi21kdZ600 |
-| Invoice & Payment Automation Kit | https://buy.stripe.com/dRm5kDe1e5rweSCfSadZ605 |
-| SOP Snap Kit | https://buy.stripe.com/14AdR90aog6aaCm9tMdZ603 |
-| AI SOP Builder Prompt Pack | https://buy.stripe.com/3cIaEXf5i8DIdOy0XgdZ604 |
+| Systems Clarity Intensive | https://buy.stripe.com/eVqbJ1aP26vA5i2eO6dZ606 |
+| Invoice & Payment Automation Kit | https://buy.stripe.com/aFa3cv5uI8DIeSC49sdZ607 |
+| SOP Snap Kit | https://buy.stripe.com/5kQ28r9KY7zE11MbBUdZ608 |
+| AI SOP Builder Prompt Pack | https://buy.stripe.com/bJedR91es07c8ue35odZ609 |
