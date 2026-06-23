@@ -23,9 +23,8 @@ arcana-systems-website/
 
 ## Purchase And Intake Flow
 
-Productized offers link directly from the website offer cards to secure Stripe Checkout:
+The free Systems Clarity / Discovery Call links to the intake form. Productized paid offers link directly from the website offer cards to secure Stripe Checkout:
 
-- Systems Clarity Intensive
 - Invoice & Payment Automation Kit
 - Client Portal OS Template
 - CEO Command Center Dashboard

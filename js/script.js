@@ -5,7 +5,6 @@ const formStatus = document.querySelector(".form-status");
 const stardustCanvas = document.querySelector("#stardust-canvas");
 const crmIntakeEndpoint = "https://crm.thearcanasystems.com/api/intake";
 const directCheckoutLinks = {
-  "Systems Clarity Intensive - $997": "https://buy.stripe.com/14A6oHg9m3joh0KeO6dZ60b",
   "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f",
   "Client Portal OS Template - $197": "https://buy.stripe.com/7sY6oH2iw8DI6m6fSadZ60a",
   "CEO Command Center Dashboard - $147": "https://buy.stripe.com/28E4gz0ao9HM25Q0XgdZ60c",
@@ -56,7 +55,14 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: "smooth", block: "start" });
 
     if (offerTarget && offerSelect instanceof HTMLSelectElement) {
-      window.setTimeout(() => offerSelect.focus({ preventScroll: true }), 550);
+      window.setTimeout(() => {
+        const targetTop = target.getBoundingClientRect().top + window.scrollY;
+        const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = "auto";
+        window.scrollTo(0, targetTop);
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
+        offerSelect.focus({ preventScroll: true });
+      }, 700);
     }
   });
 });
