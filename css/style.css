@@ -510,20 +510,6 @@ address {
   text-underline-offset: 0.22em;
 }
 
-.product-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border: 1px solid rgba(212, 161, 93, 0.2);
-  border-radius: 8px;
-  object-fit: cover;
-  object-position: center top;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-}
-
-.product-thumb-portrait {
-  object-position: center 18%;
-}
-
 .private-offers strong,
 .private-offers span {
   display: block;
