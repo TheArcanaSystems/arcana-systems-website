@@ -17,7 +17,7 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 
 ## Remaining
 
-### Systems Clarity Intensive
+### Arcana Audit Intensive
 
 - Price: $997
 - Unit label: Intensive
@@ -45,7 +45,7 @@ Use these to replace the old cto.new/Connect-created links. Create each as a nat
 
 | Offer | Current old link to replace |
 | --- | --- |
-| Systems Clarity Intensive | https://buy.stripe.com/14A6oHg9m3joh0KeO6dZ60b |
+| Arcana Audit Intensive | https://buy.stripe.com/14A6oHg9m3joh0KeO6dZ60b |
 | Invoice & Payment Automation Kit | https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f |
 | SOP Snap Kit | https://buy.stripe.com/9B6bJ11es4ns4dY7lEdZ60d |
 | AI SOP Builder Prompt Pack | https://buy.stripe.com/28EeVd8GU7zE5i2gWedZ60e |

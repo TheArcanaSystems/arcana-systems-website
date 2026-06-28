@@ -38,7 +38,7 @@ Hey [First Name], quick personal update: I just launched The Arcana Systems, whe
 
 I thought of you because founder-led businesses usually hit a point where growth creates more operational drag than it should.
 
-The starting point is a Systems Clarity Intensive: a 90-minute audit where we map bottlenecks, identify what is too manual, and create a prioritized roadmap for what to fix first.
+The starting point is an Arcana Audit Intensive: a 90-minute audit where we map bottlenecks, identify what is too manual, and create a prioritized roadmap for what to fix first.
 
 If that would be useful, here is the website link:
 https://thearcanasystems.com/#pricing
@@ -55,7 +55,7 @@ The best fit is a founder whose business is growing but whose backend still depe
 
 If anyone comes to mind, I would be grateful for an intro.
 
-The starting offer is the Systems Clarity Intensive:
+The starting offer is the Arcana Audit Intensive:
 https://thearcanasystems.com/#pricing
 ```
 
@@ -77,6 +77,6 @@ Send the referral-source message to:
 
 - Send no more than 10 LinkedIn DMs in one sitting.
 - Personalize the first sentence when there is an obvious signal.
-- Do not pitch all products. Lead with the Systems Clarity Intensive.
+- Do not pitch all products. Lead with the Arcana Audit Intensive.
 - If they reply with curiosity, ask one question before sending more detail: "What part of your backend feels most manual right now?"
 - If they say they know someone, ask for a simple intro and offer to write the intro blurb.

@@ -51,7 +51,7 @@ For each product in Stripe:
 
 Product names:
 
-- Systems Clarity Intensive
+- Arcana Audit Intensive
 - Invoice & Payment Automation Kit
 - Client Portal OS Template
 - CEO Command Center Dashboard

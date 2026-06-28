@@ -6,7 +6,7 @@ Use this today. The goal is simple: publish the website links, ask real people d
 
 | Offer | Price | Link |
 | --- | ---: | --- |
-| Systems Clarity Intensive | $997 | https://thearcanasystems.com/#pricing |
+| Arcana Audit Intensive | $997 | https://thearcanasystems.com/#pricing |
 | Invoice & Payment Automation Kit | $247 | https://thearcanasystems.com/#pricing |
 | Client Portal OS Template | $197 | https://thearcanasystems.com/#pricing |
 | CEO Command Center Dashboard | $147 | https://thearcanasystems.com/#pricing |
@@ -35,7 +35,7 @@ Manual fulfillment fallback:
 ## Today's Execution Order
 
 1. Update website with the live offer suite.
-2. Add the Systems Clarity Intensive link to every bio/profile that allows one link.
+2. Add the Arcana Audit Intensive link to every bio/profile that allows one link.
 3. Post the launch announcement on LinkedIn, Facebook, Instagram, and Threads.
 4. Send 25 direct messages to warm contacts.
 5. Send 10 emails to past colleagues, founders, operators, service providers, and small business owners.
@@ -57,7 +57,7 @@ The pain signal is not "I need a template." The pain signal is:
 
 ## Sales Ladder
 
-Lead with the Systems Clarity Intensive at $997. That is the paid diagnostic and trust-builder.
+Lead with the Arcana Audit Intensive at $997. That is the paid diagnostic and trust-builder.
 
 Then move qualified clients into:
 
@@ -73,7 +73,7 @@ The Arcana Systems is officially live.
 
 I built this for founders and service-based businesses who are tired of duct-taped workflows, scattered tools, missing SOPs, and backend chaos that only works because one person is holding the whole thing together.
 
-You can now book the Systems Clarity Intensive: a 90-minute deep-dive process audit where we identify bottlenecks, map the workflow gaps, and build a prioritized roadmap for what to fix first.
+You can now book the Arcana Audit Intensive: a 90-minute deep-dive process audit where we identify bottlenecks, map the workflow gaps, and build a prioritized roadmap for what to fix first.
 
 I also released a set of ready-to-use systems assets:
 
@@ -93,7 +93,7 @@ The Arcana Systems is open for business.
 
 If your workflows are duct-taped together, your SOPs live in someone's head, or your client delivery process depends on too much manual follow-up, I can help.
 
-Start with the Systems Clarity Intensive: a 90-minute audit that gives you a clear roadmap for what to fix first.
+Start with the Arcana Audit Intensive: a 90-minute audit that gives you a clear roadmap for what to fix first.
 
 Start here: https://thearcanasystems.com/#pricing
 
@@ -101,7 +101,7 @@ Start here: https://thearcanasystems.com/#pricing
 
 Hey [Name], quick personal/professional update: I just launched The Arcana Systems, where I help founders and service businesses clean up messy workflows, SOPs, automations, client portals, and backend operations.
 
-I am booking Systems Clarity Intensives now. It is a 90-minute audit that gives a business a clear map of what is broken, what to fix first, and where automation or documentation would save the most time.
+I am booking Arcana Audit Intensives now. It is a 90-minute audit that gives a business a clear map of what is broken, what to fix first, and where automation or documentation would save the most time.
 
 If you know anyone whose business is growing but their backend is getting messy, would you be open to sending them my way?
 
@@ -121,7 +121,7 @@ That is not a failure. It is a stage. And there is a proven way through it.
 
 At The Arcana Systems, I help founder-led service businesses clean up the backend: workflows, SOPs, automations, client portals, dashboards, and handoffs.
 
-The best starting point is the Systems Clarity Intensive: a 90-minute audit that produces a Systems Gap Report and prioritized roadmap.
+The best starting point is the Arcana Audit Intensive: a 90-minute audit that produces a Systems Gap Report and prioritized roadmap.
 
 It is $997 and you can book here:
 https://thearcanasystems.com/#pricing
@@ -142,7 +142,7 @@ One thing I see with firms at this stage: as revenue climbs, the operational sid
 
 No more "let me check with the founder." No more manual onboarding that takes weeks instead of days. No more spreadsheets held together by memory and goodwill.
 
-If your operations feel like they are running on you instead of on a system, the Systems Clarity Intensive is built for that.
+If your operations feel like they are running on you instead of on a system, the Arcana Audit Intensive is built for that.
 
 In 90 minutes, we map the bottlenecks, identify the highest-impact workflows to fix, and create a prioritized roadmap. You walk away with clarity, not homework.
 
@@ -157,7 +157,7 @@ Caitilin
 
 Hey [Name], I thought of you because you work with a lot of moving pieces.
 
-I just opened paid bookings for a Systems Clarity Intensive. It is a 90-minute backend/business process audit where I map the bottlenecks, identify what is too manual, and give you a prioritized roadmap for the systems that would make the biggest difference.
+I just opened paid bookings for an Arcana Audit Intensive. It is a 90-minute backend/business process audit where I map the bottlenecks, identify what is too manual, and give you a prioritized roadmap for the systems that would make the biggest difference.
 
 If your workflows, client handoffs, invoices, SOPs, or dashboards feel heavier than they should, this would be a strong fit.
 
@@ -175,7 +175,7 @@ I wanted to share a quick update: The Arcana Systems is officially open for busi
 
 I help founders and service-based businesses clean up the operational backend of their business: workflows, SOPs, automations, payment processes, client portals, dashboards, and handoffs.
 
-The best starting point is the Systems Clarity Intensive. It is a 90-minute process audit where we identify bottlenecks, map what is too manual or undocumented, and create a prioritized roadmap for what to fix first.
+The best starting point is the Arcana Audit Intensive. It is a 90-minute process audit where we identify bottlenecks, map what is too manual or undocumented, and create a prioritized roadmap for what to fix first.
 
 If you know a founder, consultant, agency owner, coach, or small business owner whose backend is starting to feel messy, I would be grateful for an introduction.
 
@@ -193,7 +193,7 @@ Completely fair. The main question I would use is: is the current backend fricti
 
 ### "Can you just build it for me?"
 
-Yes, that is possible. I still recommend starting with the Systems Clarity Intensive because it gives us the roadmap and scope. From there, I can quote the implementation based on what your business actually needs.
+Yes, that is possible. I still recommend starting with the Arcana Audit Intensive because it gives us the roadmap and scope. From there, I can quote the implementation based on what your business actually needs.
 
 ### "I am not ready for $997."
 
