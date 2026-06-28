@@ -23,7 +23,7 @@ arcana-systems-website/
 
 ## Purchase And Intake Flow
 
-The free Arcana Audit / Discovery Call links to the intake form. Productized paid offers link directly from the website offer cards to secure Stripe Checkout:
+The free Arcana Audit links to the intake form. Productized paid offers link directly from the website offer cards to secure Stripe Checkout:
 
 - Invoice & Payment Automation Kit
 - Client Portal OS Template
