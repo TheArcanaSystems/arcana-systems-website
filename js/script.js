@@ -1,6 +1,17 @@
 const auditForm = document.querySelector("#audit-form");
 const formStatus = document.querySelector(".form-status");
 
+(function prefillInterestFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const interest = params.get("interest");
+  const offerSelect = document.querySelector("#offer-interest");
+
+  if (interest && offerSelect instanceof HTMLSelectElement) {
+    const hasOption = Array.from(offerSelect.options).some((option) => option.value === interest);
+    if (hasOption) offerSelect.value = interest;
+  }
+})();
+
 const directCheckoutLinks = {
   "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f",
   "Client Portal OS Template - $197": "https://buy.stripe.com/7sY6oH2iw8DI6m6fSadZ60a",

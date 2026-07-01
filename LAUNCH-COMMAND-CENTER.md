@@ -6,12 +6,12 @@ Use this today. The goal is simple: publish the website links, ask real people d
 
 | Offer | Price | Link |
 | --- | ---: | --- |
-| Arcana Audit Intensive | $997 | https://thearcanasystems.com/#pricing |
-| Invoice & Payment Automation Kit | $247 | https://thearcanasystems.com/#pricing |
-| Client Portal OS Template | $197 | https://thearcanasystems.com/#pricing |
-| CEO Command Center Dashboard | $147 | https://thearcanasystems.com/#pricing |
-| SOP Snap Kit | $97 | https://thearcanasystems.com/#pricing |
-| AI SOP Builder Prompt Pack | $47 | https://thearcanasystems.com/#pricing |
+| Arcana Audit Intensive | $997 | https://thearcanasystems.com/pricing.html |
+| Invoice & Payment Automation Kit | $247 | https://thearcanasystems.com/products/invoice-billing-kit.html |
+| Client Portal OS Template | $197 | https://thearcanasystems.com/products/client-portal-os.html |
+| CEO Command Center Dashboard | $147 | https://thearcanasystems.com/products/ceo-command-center.html |
+| SOP Snap Kit | $97 | https://thearcanasystems.com/products/sop-snap-kit.html |
+| AI SOP Builder Prompt Pack | $47 | https://thearcanasystems.com/products/ai-sop-builder.html |
 
 ## 45-Minute Money Path QA
 

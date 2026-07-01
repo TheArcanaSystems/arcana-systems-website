@@ -87,6 +87,22 @@
       ]
     }
   </script>
+  <script>
+    (function redirectLegacyAnchors() {
+      var redirects = {
+        "#pricing": "pricing.html",
+        "#offers": "pricing.html",
+        "#systems": "services.html",
+        "#platforms": "services.html",
+        "#method": "services.html",
+        "#about": "about.html",
+        "#contact": "contact.html",
+        "#audit-intake": "contact.html#audit-form"
+      };
+      var target = redirects[window.location.hash];
+      if (target) window.location.replace(target);
+    })();
+  </script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -101,15 +117,13 @@
         </span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#systems">Systems</a>
-        <a href="#platforms">Platforms</a>
-        <a href="#method">Method</a>
-        <a href="#offers">Offers</a>
-        <a href="#about">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
         <a href="blog/index.html">Insights</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <a class="btn btn-gold btn-small" href="#audit-intake" data-offer-target="Free Arcana Audit">Book the Free Call</a>
+      <a class="btn btn-gold btn-small" href="contact.html?interest=Free%20Arcana%20Audit#audit-form">Book the Free Call</a>
     </div>
   </header>
 
@@ -125,8 +139,8 @@
           </p>
           <div class="hero-rule" aria-hidden="true"><span>&#10022;</span></div>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#audit-intake" data-offer-target="Free Arcana Audit">Book the Free Arcana Audit</a>
-            <a class="btn btn-ghost" href="#offers">Explore Systems</a>
+            <a class="btn btn-gold" href="contact.html?interest=Free%20Arcana%20Audit#audit-form">Book the Free Arcana Audit</a>
+            <a class="btn btn-ghost" href="services.html">Explore Systems</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -146,56 +160,13 @@
       </div>
     </section>
 
-    <section id="systems" class="section section-light">
-      <img class="floral-accent floral-systems" src="images/brand-flower-crop.jpg" alt="" width="214" height="342" aria-hidden="true" loading="lazy">
-      <div class="container essence-grid">
-        <div>
-          <p class="eyebrow">Systems Design</p>
-          <h2>Systems first. Platforms second.</h2>
-          <p class="section-copy">
-            The Arcana Systems is platform agnostic by design. We do not force a business into a predetermined tool,
-            template, or software stack. We assess how the business actually operates, where the friction lives,
-            what the team needs, and which architecture will create clarity, consistency, and scale.
-          </p>
-          <p class="section-copy">
-            We build elegant, scalable operating systems custom-fitted to your business. A fully built,
-            ready-to-run infrastructure designed from how you actually work, then refined so it works without you.
-          </p>
-        </div>
-        <aside class="standard-card">
-          <p class="eyebrow">What We Build</p>
-          <p>Clean workflows, documented SOPs, client portals, dashboards, automations, and operating systems your team can actually use.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="platforms" class="section section-soft">
-      <img class="floral-accent floral-platforms" src="images/brand-flower-crop.jpg" alt="" width="214" height="342" aria-hidden="true" loading="lazy">
-      <div class="container platform-grid">
-        <div>
-          <p class="eyebrow">Who We Help</p>
-          <h2>Founders carrying too many processes in their head.</h2>
-          <div class="platform-callout">
-            <p>You're not alone. You just need clarity, structure, and freedom in that order.</p>
-          </div>
-        </div>
-        <div class="platform-copy">
-          <p>Small teams running on inboxes, spreadsheets, scattered files, and memory.</p>
-          <p>Service businesses ready to document, automate, centralize, and hand off work with confidence.</p>
-          <ul class="tool-list" aria-label="Platforms we work with">
-            <li>Microsoft 365</li><li>SharePoint</li><li>Power Automate</li><li>Notion</li><li>Airtable</li><li>ClickUp</li><li>Asana</li><li>HubSpot</li><li>Stripe</li><li>Client Portals</li><li>Dashboards</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section id="method" class="section section-dark">
       <img class="floral-accent floral-method" src="images/brand-flower-crop.jpg" alt="" width="214" height="342" aria-hidden="true" loading="lazy">
       <div class="container method-shell">
         <div class="section-heading compact dark">
           <p class="eyebrow">The Arcana Method</p>
           <h2>Diagnose the chaos. Architect the flow. Build what holds.</h2>
-          <p>Our process is four repeatable phases, one seamless experience.</p>
+          <p>Platform agnostic by design. Four repeatable phases, one seamless experience.</p>
         </div>
         <div class="method-grid">
           <article><span>01 / Audit</span><h3>Arcana Audit</h3><p>Analyze current workflows, tools, documentation, and operational friction.</p></article>
@@ -203,6 +174,7 @@
           <article><span>03 / Build</span><h3>White-Glove Implementation</h3><p>6-8 weeks. Custom portal, automation workflows, complete SOP library. Fully tested.</p></article>
           <article><span>04 / Steward</span><h3>Monthly Partnership</h3><p>Proactive health checks, optimization, and team training. Your system evolves with you.</p></article>
         </div>
+        <p class="section-heading compact dark"><a class="btn btn-ghost" href="services.html">See the full service breakdown &rarr;</a></p>
       </div>
     </section>
 
@@ -220,7 +192,7 @@
             <p class="price">Free</p>
             <p><strong>Outcome:</strong> A clear read on the operational friction costing you time, with direction on the best next step.</p>
             <ul><li>Arcana Audit session</li><li>Bottleneck detection</li><li>Workflow direction</li><li>Fit check for next steps</li></ul>
-            <a class="btn btn-gold" href="#audit-intake" data-offer-target="Free Arcana Audit">Book the Free Call</a>
+            <a class="btn btn-gold" href="contact.html?interest=Free%20Arcana%20Audit#audit-form">Book the Free Call</a>
           </article>
           <article class="offer-card">
             <p class="offer-label">Done-For-You Build</p>
@@ -228,7 +200,7 @@
             <p class="price">From $8,500</p>
             <p><strong>Outcome:</strong> Your entire operating infrastructure, built from scratch in 6-8 weeks. Custom portal, automations, and SOPs.</p>
             <ul><li>Custom client portal</li><li>"Big Three" automations</li><li>Full SOP library</li><li>Team training &amp; handoff</li></ul>
-            <a class="btn btn-ghost" href="#audit-intake" data-offer-target="Custom implementation quote">Get a Quote</a>
+            <a class="btn btn-ghost" href="contact.html?interest=Custom%20implementation%20quote#audit-form">Get a Quote</a>
           </article>
           <article class="offer-card">
             <p class="offer-label">The Steward</p>
@@ -236,7 +208,7 @@
             <p class="price">From $1k/mo</p>
             <p><strong>Outcome:</strong> Designed to evolve. Monthly health checks, SOP updates, and priority support to keep you scaling.</p>
             <ul><li>Error monitoring</li><li>Workflow optimization</li><li>SOP maintenance</li><li>Priority Slack support</li></ul>
-            <a class="btn btn-ghost" href="#audit-intake" data-offer-target="Monthly systems retainer">Request Retainer Info</a>
+            <a class="btn btn-ghost" href="contact.html?interest=Monthly%20systems%20retainer#audit-form">Request Retainer Info</a>
           </article>
         </div>
 
@@ -249,6 +221,7 @@
             <article><strong>CEO Command Center Dashboard</strong><span>$147</span><p>Your business at a glance. Revenue. Ops. Capacity.</p><a href="products/ceo-command-center.html">View Details</a><a class="btn btn-small btn-gold" href="#" data-offer-target="CEO Command Center Dashboard - $147">Buy Now</a></article>
             <article><strong>Invoice &amp; Billing Automation Kit</strong><span>$247</span><p>From contract signed to invoice paid, automatically.</p><a href="products/invoice-billing-kit.html">View Details</a><a class="btn btn-small btn-gold" href="#" data-offer-target="Invoice & Payment Automation Kit - $247">Buy Now</a></article>
           </div>
+          <p class="section-heading compact"><a class="btn btn-ghost" href="pricing.html">See full pricing &amp; what's included &rarr;</a></p>
         </div>
       </div>
     </section>
@@ -285,54 +258,10 @@
         <div class="about-panel">
           <p class="eyebrow">Meet the Founder</p>
           <blockquote class="founder-quote">"I build systems so you can build your business."</blockquote>
-          <h2>The architecture of trust: meet the founder behind The Arcana Method.</h2>
-          <p>The systems you need. The trust you deserve.</p>
+          <h2>The architecture of trust.</h2>
           <p>Every founder I work with has the same story: the business grew faster than the operations could handle. The tools multiplied. The processes stayed in someone's head. And somewhere along the way, they realized they'd become the bottleneck.</p>
-          <p>I know that story because I've lived versions of it: on the client side, the consulting side, and now on the building side.</p>
-          <p>Before Arcana Systems, I spent years working with boutique agencies and professional service firms as a strategist, systems lead, and operational partner. I watched brilliant founders burn 20 hours a week on tasks that should have been handled by a system. I saw teams with world-class talent held back by duct-taped workflows. And I realized that most "operations solutions" fell into two camps: too hands-off (templates you have to build yourself) or too heavy (expensive consultants who hand you a report and disappear).</p>
-          <p>There had to be a better way.</p>
-          <p><strong>The Arcana Systems</strong> was built to fill that gap. We don't hand you templates and wish you luck. We don't spend months diagnosing problems without building solutions. We do something simpler and harder: we build your operating system from Audit to Blueprint to Build to Steward, and we stay with you until it runs without you.</p>
-          <p>I lead every engagement personally, from the first Arcana Audit to the final handover. My role is to understand your business deeply enough to design systems that feel like they were built for you. Because they were.</p>
-          <p>That's the promise I make to every client: not a system that works. A system that works <em>for you.</em></p>
-
-          <div class="about-copy">
-            <h3>Operational architecture built on experience, accelerated by craft.</h3>
-            <ul class="principles-list">
-              <li>Years of hands-on systems design for boutique agencies</li>
-              <li>Deep experience with AI-accelerated process mapping</li>
-              <li>Track record of reducing founder workweeks by 10-20 hours</li>
-              <li>Experienced in Notion, Airtable, Make.com, Stripe</li>
-              <li>Specialist in the "Founder Trap" ($500K-$5M ARR)</li>
-            </ul>
-          </div>
-
-          <div class="story">
-            <h3>Systems should serve the founder, not the other way around.</h3>
-            <p>I believe that great operations are invisible. When a system works, the founder doesn't think about it. The team doesn't question it. The client doesn't wonder where things stand. Everything just <em>flows.</em></p>
-            <p>That flow is the result of deliberate architecture. Not more tools. Not more meetings. Just the right processes, in the right order, documented for the people who need them.</p>
-            <ul class="principles-list">
-              <li><strong>Clarity over complexity.</strong> Every system we build reduces noise, never adds to it.</li>
-              <li><strong>Structure that scales.</strong> Repeatable frameworks that turn founder intuition into team execution.</li>
-              <li><strong>Freedom as the outcome.</strong> Time, energy, and attention returned to the people who built the business.</li>
-            </ul>
-          </div>
-
-          <div class="working-together">
-            <h3>What it's like to work together.</h3>
-            <p>I don't believe in "surprise and delight" as a tactic. I believe in radical clarity: you should always know where your project stands, what's coming next, and exactly what you'll get.</p>
-            <div class="experience-steps">
-              <article><h4>The call isn't a sales pitch.</h4><p>The free Arcana Audit gives us both a clear look at the friction, fit, and best next step. Whether you move forward with us or not, you walk away with clarity.</p></article>
-              <article><h4>The Blueprint is transparent.</h4><p>Before we build anything, you see the full architecture: workflows, tech stack, SOP structure. No scope creep. No surprises.</p></article>
-              <article><h4>The Build is white-glove.</h4><p>We construct your portal, engineer your automations, write your SOPs, and test everything. You don't lift a finger.</p></article>
-              <article><h4>The Steward is ongoing.</h4><p>Every retainer client gets proactive health checks, continuous optimization, and a partner who knows their system as well as they do.</p></article>
-            </div>
-          </div>
-
-          <div class="about-cta">
-            <h3>Let's build something that moves like magic.</h3>
-            <p>If you're a founder who's tired of being the bottleneck, if you're ready for Clarity, Structure, and Freedom, I'd love to start the conversation.</p>
-            <a class="btn btn-gold" href="#audit-intake" data-offer-target="Free Arcana Audit">Book the Free Call <span aria-hidden="true">&#10022;</span></a>
-          </div>
+          <p>I lead every engagement personally, from the first Arcana Audit to the final handover &mdash; because the promise I make to every client isn't a system that works. It's a system that works <em>for you.</em></p>
+          <a class="btn btn-ghost" href="about.html">Read the full story &rarr;</a>
         </div>
       </div>
     </section>
@@ -353,59 +282,15 @@
       </div>
     </section>
 
-    <section id="audit-intake" class="section section-dark final-cta">
+    <section id="contact" class="section section-dark final-cta">
       <img class="floral-accent floral-intake" src="images/brand-flower-crop.jpg" alt="" width="214" height="342" aria-hidden="true" loading="lazy">
-      <div class="container final-panel">
+      <div class="container final-panel text-center">
         <div class="intake-heading">
           <p class="eyebrow">Ready for Clarity, Structure, and Freedom?</p>
-          <h2>Book your free Arcana Audit.</h2>
-          <p>Use this form to request the free call, ask about a custom implementation, or send buyer questions.</p>
-        </div>
-        <form id="audit-form" class="audit-form" action="https://crm.thearcanasystems.com/api/intake" method="post" novalidate>
-          <input type="hidden" name="source" value="Website intake">
-          <div class="field-row">
-            <label for="offer-interest">Interest <span aria-hidden="true">*</span></label>
-            <select id="offer-interest" name="offer_interest" required>
-              <option value="">Select one</option>
-              <option>Free Arcana Audit</option>
-              <option>Custom implementation quote</option>
-              <option>Monthly systems retainer</option>
-              <option>Question before booking the free Arcana Audit Call</option>
-              <option>Question before buying a template</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <label for="company-name">Business name <span aria-hidden="true">*</span></label>
-            <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
-          </div>
-          <div class="field-row two-column">
-            <div class="field">
-              <label for="contact-name">Name <span aria-hidden="true">*</span></label>
-              <input id="contact-name" name="contact_name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
-              <input id="contact-email" name="contact_email" type="email" autocomplete="email" required>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="biggest-bottleneck">What feels the messiest right now?</label>
-            <textarea id="biggest-bottleneck" name="biggest_bottleneck" rows="3"></textarea>
-          </div>
-          <button class="btn btn-gold" type="submit">Send Inquiry <span aria-hidden="true">&#10022;</span></button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-light contact-section">
-      <img class="floral-accent floral-contact" src="images/brand-flower-crop.jpg" alt="" width="214" height="342" aria-hidden="true" loading="lazy">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
           <h2>Ready for operations that finally feel clear?</h2>
-          <p class="section-copy">Start with a discovery note. We will route you to the right next step: audit, custom build, or systems support.</p>
+          <p>Start with a discovery note. We will route you to the right next step: audit, custom build, or systems support.</p>
         </div>
+        <a class="btn btn-gold" href="contact.html?interest=Free%20Arcana%20Audit#audit-form">Book the Free Arcana Audit <span aria-hidden="true">&#10022;</span></a>
         <address class="contact-card">
           <p><strong>Email</strong><br><a href="mailto:discovery@thearcanasystems.com">discovery@thearcanasystems.com</a></p>
           <p><strong>Location</strong><br>Phoenix, Arizona</p>
