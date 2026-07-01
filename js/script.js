@@ -1,14 +1,22 @@
 const auditForm = document.querySelector("#audit-form");
 const formStatus = document.querySelector(".form-status");
 
-(function prefillInterestFromQuery() {
-  const params = new URLSearchParams(window.location.search);
-  const interest = params.get("interest");
+(function prefillInterestFromHash() {
+  // Uses the hash (not a query string) because static hosts commonly redirect
+  // /page.html -> /page for clean URLs, and that redirect can drop query
+  // strings while preserving the hash.
+  const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  const interest = hashParams.get("interest");
   const offerSelect = document.querySelector("#offer-interest");
 
   if (interest && offerSelect instanceof HTMLSelectElement) {
     const hasOption = Array.from(offerSelect.options).some((option) => option.value === interest);
     if (hasOption) offerSelect.value = interest;
+  }
+
+  if (interest) {
+    const form = document.querySelector("#audit-form");
+    if (form) form.scrollIntoView({ block: "start" });
   }
 })();
 
