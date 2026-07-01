@@ -144,12 +144,12 @@ if (auditForm) {
 
       auditForm.reset();
       setStatus(
-        "Your inquiry was sent to the TAS CRM. Caitilin will reply from cnelson@thearcanasystems.com.",
+        "Your inquiry was sent to the TAS CRM. We will reply from discovery@thearconsystems.com.",
         "success"
       );
     } catch (error) {
       setStatus(
-        error.message || "Something went wrong while submitting. Please email cnelson@thearcanasystems.com.",
+        error.message || "Something went wrong while submitting. Please email discovery@thearconsystems.com.",
         "error"
       );
     } finally {

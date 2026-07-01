@@ -141,65 +141,85 @@ ul {
   z-index: 1;
 }
 
-.section-light::before,
-.section-light::after,
-.section-soft::before,
-.section-soft::after,
-.contact-section::after {
-  content: "";
+.floral-accent {
   position: absolute;
   z-index: 0;
-  width: 220px;
-  height: 350px;
-  background: url("../images/brand-flower-crop.jpg") center / contain no-repeat;
-  opacity: 0;
+  width: 230px;
+  height: auto;
+  opacity: 0.3;
   pointer-events: none;
-  mix-blend-mode: multiply;
-  filter: saturate(1.02);
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 48%, rgba(0, 0, 0, 0.68) 62%, transparent 78%);
-  mask-image: radial-gradient(ellipse at center, #000 48%, rgba(0, 0, 0, 0.68) 62%, transparent 78%);
 }
 
-#systems::after {
-  right: -80px;
-  bottom: -130px;
-  opacity: 0.12;
+.floral-systems {
+  right: -62px;
+  bottom: -118px;
+  width: 260px;
+  opacity: 0.28;
+  transform: rotate(-16deg);
+}
+
+.floral-platforms {
+  left: -78px;
+  top: 42px;
+  width: 210px;
+  opacity: 0.26;
+  transform: rotate(18deg);
+}
+
+.floral-method {
+  right: -56px;
+  top: -88px;
+  width: 250px;
+  opacity: 0.18;
+  transform: rotate(20deg);
+}
+
+.floral-offers {
+  right: -58px;
+  top: 70px;
+  width: 235px;
+  opacity: 0.27;
+  transform: rotate(10deg);
+}
+
+.floral-testimonials {
+  left: -74px;
+  bottom: -118px;
+  width: 245px;
+  opacity: 0.17;
+  transform: rotate(-22deg);
+}
+
+.floral-about {
+  right: -86px;
+  top: 180px;
+  width: 285px;
+  opacity: 0.24;
+  transform: rotate(14deg);
+}
+
+.floral-faq {
+  left: -72px;
+  bottom: -112px;
+  width: 215px;
+  opacity: 0.25;
+  transform: rotate(20deg);
+}
+
+.floral-intake {
+  right: -68px;
+  top: -98px;
+  width: 245px;
+  opacity: 0.16;
   transform: rotate(-18deg);
 }
 
-#platforms::before {
-  left: -95px;
-  top: 24px;
-  opacity: 0.11;
-  transform: rotate(16deg) scale(0.86);
-}
-
-#offers::after {
-  right: -75px;
-  top: 92px;
-  opacity: 0.1;
-  transform: rotate(10deg) scale(0.94);
-}
-
-#about::before {
-  left: -115px;
-  bottom: 6%;
-  opacity: 0.13;
-  transform: rotate(-10deg) scale(1.05);
-}
-
-#faq::after {
-  right: -105px;
-  bottom: -120px;
-  opacity: 0.1;
-  transform: rotate(14deg) scale(0.82);
-}
-
-.contact-section::after {
-  right: -75px;
-  top: -120px;
-  opacity: 0.12;
-  transform: rotate(-16deg) scale(0.9);
+.floral-contact {
+  right: -60px;
+  top: -86px;
+  width: 230px;
+  opacity: 0.27;
+  transform: rotate(-14deg);
 }
 
 .section-light {
@@ -332,8 +352,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(18px);
-  background: rgba(250, 246, 240, 0.88);
+  background: rgba(250, 246, 240, 0.96);
   border-bottom: 1px solid rgba(124, 88, 172, 0.15);
 }
 
@@ -482,10 +501,7 @@ ul {
   bottom: -4rem;
   z-index: 0;
   width: min(88%, 420px);
-  opacity: 0.56;
-  filter: saturate(1.04) drop-shadow(0 22px 32px rgba(20, 11, 34, 0.14));
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 50%, rgba(0, 0, 0, 0.7) 64%, transparent 80%);
-  mask-image: radial-gradient(ellipse at center, #000 50%, rgba(0, 0, 0, 0.7) 64%, transparent 80%);
+  opacity: 0.42;
   pointer-events: none;
 }
 
@@ -497,8 +513,7 @@ ul {
   padding: 2rem;
   border: 1px solid rgba(201, 150, 67, 0.28);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.76);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: var(--shadow);
 }
 
@@ -1015,7 +1030,6 @@ ul {
   top: 0;
   z-index: 20;
   padding: 1rem 0;
-  backdrop-filter: blur(18px);
   background: rgba(247, 242, 251, 0.76);
   border-bottom: 1px solid rgba(124, 88, 172, 0.12);
 }
