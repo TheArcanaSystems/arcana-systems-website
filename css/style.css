@@ -995,8 +995,8 @@ ul {
 
 .contact-card {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
   padding: 2rem;
   align-self: center;
 }
@@ -1005,6 +1005,8 @@ ul {
   color: var(--plum);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .site-footer {
