@@ -1030,7 +1030,7 @@ ul {
   top: 0;
   z-index: 20;
   padding: 1rem 0;
-  background: rgba(247, 242, 251, 0.76);
+  background: rgba(250, 246, 240, 0.97);
   border-bottom: 1px solid rgba(124, 88, 172, 0.12);
 }
 
@@ -1453,7 +1453,7 @@ ul {
   transform: translateY(-3px);
 }
 
-.experience-steps h4 {
+.experience-steps h3 {
   color: var(--plum);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
