@@ -121,18 +121,13 @@ ul {
 }
 
 .eyebrow,
-.offer-label,
-.section-kicker {
+.offer-label {
   margin: 0 0 0.8rem;
   color: var(--gold);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-}
-
-.section-kicker {
-  color: rgba(201, 150, 67, 0.85);
 }
 
 .section {
@@ -656,6 +651,10 @@ ul {
   padding-right: 1rem;
 }
 
+.about-grid {
+  align-items: stretch;
+}
+
 .about-cta {
   margin-top: 2rem;
   padding: 1.6rem;
@@ -679,6 +678,9 @@ ul {
 }
 
 .founder-card {
+  position: sticky;
+  top: 108px;
+  align-self: start;
   overflow: hidden;
   padding: 1.2rem;
 }
@@ -1060,6 +1062,10 @@ ul {
   .hero-copy h1 {
     max-width: none;
   }
+
+  .founder-card {
+    top: 92px;
+  }
 }
 
 @media (max-width: 820px) {
@@ -1107,6 +1113,10 @@ ul {
 
   .hero-metrics {
     gap: 0.75rem;
+  }
+
+  .founder-card {
+    position: static;
   }
 
   .hero-metrics div {
