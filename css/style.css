@@ -27,6 +27,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
+  overflow-x: hidden;
 }
 
 body {
@@ -131,7 +132,74 @@ ul {
 }
 
 .section {
+  position: relative;
   padding: 96px 0;
+}
+
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-light::before,
+.section-light::after,
+.section-soft::before,
+.section-soft::after,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 220px;
+  height: 350px;
+  background: url("../images/brand-flower-crop.jpg") center / contain no-repeat;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  filter: saturate(1.02);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 48%, rgba(0, 0, 0, 0.68) 62%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, #000 48%, rgba(0, 0, 0, 0.68) 62%, transparent 78%);
+}
+
+#systems::after {
+  right: -80px;
+  bottom: -130px;
+  opacity: 0.12;
+  transform: rotate(-18deg);
+}
+
+#platforms::before {
+  left: -95px;
+  top: 24px;
+  opacity: 0.11;
+  transform: rotate(16deg) scale(0.86);
+}
+
+#offers::after {
+  right: -75px;
+  top: 92px;
+  opacity: 0.1;
+  transform: rotate(10deg) scale(0.94);
+}
+
+#about::before {
+  left: -115px;
+  bottom: 6%;
+  opacity: 0.13;
+  transform: rotate(-10deg) scale(1.05);
+}
+
+#faq::after {
+  right: -105px;
+  bottom: -120px;
+  opacity: 0.1;
+  transform: rotate(14deg) scale(0.82);
+}
+
+.contact-section::after {
+  right: -75px;
+  top: -120px;
+  opacity: 0.12;
+  transform: rotate(-16deg) scale(0.9);
 }
 
 .section-light {
@@ -342,11 +410,15 @@ ul {
 
 .hero-shell {
   position: relative;
-  min-height: 720px;
-  padding: 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.7fr);
+  align-items: center;
+  gap: 3.5rem;
+  min-height: 560px;
+  padding: 4rem 4.25rem;
   border: 1px solid rgba(201, 150, 67, 0.28);
   background:
-    linear-gradient(135deg, rgba(255, 252, 255, 0.96), rgba(243, 236, 250, 0.96));
+    linear-gradient(135deg, rgba(255, 252, 255, 0.98), rgba(246, 240, 250, 0.96));
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -368,7 +440,7 @@ ul {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 680px;
+  max-width: 700px;
   padding: 12px 0;
 }
 
@@ -377,23 +449,15 @@ ul {
   color: var(--plum);
 }
 
-.hero-logo {
-  width: min(520px, 100%);
-  margin-bottom: 2rem;
-}
-
-.hero-statement {
-  max-width: 12ch;
-  margin: 0.7rem 0 1.2rem;
-  color: var(--plum-deep);
-  font-family: var(--font-heading);
-  font-size: 2.45rem;
-  line-height: 1.05;
+.hero-copy h1 {
+  max-width: 13.5ch;
+  font-size: 4rem;
+  line-height: 1.02;
 }
 
 .hero-lead {
-  max-width: 62ch;
-  margin-top: 1.25rem;
+  max-width: 58ch;
+  margin-top: 1.4rem;
   font-size: 1.08rem;
 }
 
@@ -404,14 +468,66 @@ ul {
   margin-top: 1.6rem;
 }
 
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  min-height: 430px;
+  display: grid;
+  align-items: center;
+}
+
 .hero-floral {
   position: absolute;
+  right: -1rem;
+  bottom: -4rem;
+  z-index: 0;
+  width: min(88%, 420px);
+  opacity: 0.56;
+  filter: saturate(1.04) drop-shadow(0 22px 32px rgba(20, 11, 34, 0.14));
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 50%, rgba(0, 0, 0, 0.7) 64%, transparent 80%);
+  mask-image: radial-gradient(ellipse at center, #000 50%, rgba(0, 0, 0, 0.7) 64%, transparent 80%);
+  pointer-events: none;
+}
+
+.hero-card {
+  position: relative;
   z-index: 1;
-  right: 5rem;
-  top: 54%;
-  width: min(34vw, 360px);
-  transform: translateY(-50%);
-  filter: drop-shadow(0 22px 32px rgba(20, 11, 34, 0.18));
+  width: min(100%, 430px);
+  margin-left: auto;
+  padding: 2rem;
+  border: 1px solid rgba(201, 150, 67, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.hero-card::before {
+  content: "\2726";
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--gold);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.hero-card h2 {
+  color: var(--plum);
+  font-size: 2.75rem;
+}
+
+.hero-card ul {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card li {
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(91, 58, 131, 0.12);
+  color: var(--text-soft);
 }
 
 .essence-grid,
@@ -426,6 +542,11 @@ ul {
 }
 
 .platform-grid {
+  align-items: center;
+}
+
+.contact-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(460px, 0.85fr);
   align-items: center;
 }
 
@@ -858,7 +979,11 @@ ul {
 }
 
 .contact-card {
-  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  align-self: center;
 }
 
 .contact-card a {
@@ -1029,7 +1154,6 @@ ul {
   .hero-shell,
   .essence-grid,
   .platform-grid,
-  .about-grid,
   .faq-grid,
   .contact-grid,
   .details-grid {
@@ -1038,11 +1162,12 @@ ul {
 
   .hero-shell {
     min-height: auto;
+    gap: 2.5rem;
+    padding: 3rem;
   }
 
   .essence-grid,
   .platform-grid,
-  .about-grid,
   .faq-grid,
   .contact-grid,
   .details-grid,
@@ -1061,6 +1186,21 @@ ul {
 
   .hero-copy h1 {
     max-width: none;
+    font-size: 3.7rem;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .hero-card {
+    margin-left: 0;
+  }
+
+  .hero-floral {
+    right: 0;
+    bottom: -2rem;
+    width: min(52%, 280px);
   }
 
   .founder-card {
@@ -1086,18 +1226,21 @@ ul {
     padding: 20px;
   }
 
-  .hero-floral {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: min(68%, 260px);
-    margin: 1.5rem auto 0;
-    transform: none;
+  .hero-card {
+    padding: 1.35rem;
   }
 
-  .hero-statement {
-    max-width: none;
-    font-size: 2rem;
+  .hero-visual {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
+  .hero-floral {
+    top: 0;
+    right: -1.5rem;
+    bottom: auto;
+    width: 170px;
+    opacity: 0.28;
   }
 
   .hero-metrics,
@@ -1107,6 +1250,7 @@ ul {
   .product-grid,
   .outcome-grid,
   .method-trio,
+  .about-grid,
   .two-column {
     grid-template-columns: 1fr;
   }
@@ -1117,6 +1261,10 @@ ul {
 
   .founder-card {
     position: static;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
   }
 
   .hero-metrics div {
@@ -1144,6 +1292,10 @@ ul {
 
   h1 {
     font-size: 3.8rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 3.35rem;
   }
 
   h2 {
