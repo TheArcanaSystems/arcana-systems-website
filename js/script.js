@@ -2,36 +2,28 @@ const auditForm = document.querySelector("#audit-form");
 const formStatus = document.querySelector(".form-status");
 
 const moduleCatalog = {
-  Genesis: { number: "00", price: 97, focus: "Onboarding & business setup" },
-  Alchemist: { number: "01", price: 97, focus: "Automation & tool stack" },
-  Oracle: { number: "02", price: 97, focus: "Data, analytics & reporting" },
-  Cultivator: { number: "03", price: 97, focus: "Growth strategy & scaling" },
-  Sovereign: { number: "04", price: 97, focus: "Org structure & governance" },
-  Codex: { number: "05", price: 97, focus: "SOPs & process documentation" },
-  Accord: { number: "06", price: 97, focus: "CRM & client relationships" },
-  Vanguard: { number: "07", price: 97, focus: "Project & task management" },
-  Fortitude: { number: "08", price: 147, focus: "Team & HR operations" },
-  Lantern: { number: "09", price: 147, focus: "Business audit & assessment" },
-  Flux: { number: "10", price: 147, focus: "Workflow automation & cycles" },
-  Scale: { number: "11", price: 147, focus: "Compliance, contracts & legal ops" },
-  Elevation: { number: "12", price: 147, focus: "Business pivot & transformation" },
-  Metamorphosis: { number: "13", price: 147, focus: "System migration & overhaul" },
-  Confluence: { number: "14", price: 147, focus: "System integration & harmony" },
-  Unchained: { number: "15", price: 147, focus: "Risk management & bottleneck removal" },
-  Reclaim: { number: "16", price: 197, focus: "Crisis management & recovery" },
-  Beacon: { number: "17", price: 197, focus: "Brand, comms & visibility" },
-  Foresight: { number: "18", price: 197, focus: "Research, strategy & planning" },
-  Prosperity: { number: "19", price: 197, focus: "Financial operations & reporting" },
-  Ascension: { number: "20", price: 197, focus: "Performance reviews & KPIs" },
-  Cosmos: { number: "21", price: 197, focus: "Full system architecture" },
-};
-
-const directCheckoutLinks = {
-  "Invoice & Payment Automation Kit - $247": "https://buy.stripe.com/3cI4gz8GU1bg5i25dwdZ60f",
-  "Client Portal OS Template - $197": "https://buy.stripe.com/7sY6oH2iw8DI6m6fSadZ60a",
-  "CEO Command Center Dashboard - $147": "https://buy.stripe.com/28E4gz0ao9HM25Q0XgdZ60c",
-  "SOP Snap Kit - $97": "https://buy.stripe.com/9B6bJ11es4ns4dY7lEdZ60d",
-  "AI SOP Builder Prompt Pack - $47": "https://buy.stripe.com/28EeVd8GU7zE5i2gWedZ60e",
+  Genesis: { number: "00", price: 1500, focus: "Onboarding & business setup" },
+  Alchemist: { number: "01", price: 1500, focus: "Automation & tool stack" },
+  Oracle: { number: "02", price: 1500, focus: "Data, analytics & reporting" },
+  Cultivator: { number: "03", price: 1500, focus: "Growth strategy & scaling" },
+  Sovereign: { number: "04", price: 1500, focus: "Org structure & governance" },
+  Codex: { number: "05", price: 1500, focus: "SOPs & process documentation" },
+  Accord: { number: "06", price: 1500, focus: "CRM & client relationships" },
+  Vanguard: { number: "07", price: 1500, focus: "Project & task management" },
+  Fortitude: { number: "08", price: 2500, focus: "Team & HR operations" },
+  Lantern: { number: "09", price: 2500, focus: "Business audit & assessment" },
+  Flux: { number: "10", price: 2500, focus: "Workflow automation & cycles" },
+  Scale: { number: "11", price: 2500, focus: "Compliance, contracts & legal ops" },
+  Elevation: { number: "12", price: 2500, focus: "Business pivot & transformation" },
+  Metamorphosis: { number: "13", price: 2500, focus: "System migration & overhaul" },
+  Confluence: { number: "14", price: 2500, focus: "System integration & harmony" },
+  Unchained: { number: "15", price: 2500, focus: "Risk management & bottleneck removal" },
+  Reclaim: { number: "16", price: 3500, focus: "Crisis management & recovery" },
+  Beacon: { number: "17", price: 3500, focus: "Brand, comms & visibility" },
+  Foresight: { number: "18", price: 3500, focus: "Research, strategy & planning" },
+  Prosperity: { number: "19", price: 3500, focus: "Financial operations & reporting" },
+  Ascension: { number: "20", price: 3500, focus: "Performance reviews & KPIs" },
+  Cosmos: { number: "21", price: 8500, focus: "Full system architecture" },
 };
 
 function formatCurrency(value) {
@@ -63,16 +55,6 @@ function formatCurrency(value) {
     if (form) form.scrollIntoView({ block: "start" });
   }
 })();
-
-document.querySelectorAll("[data-offer-target]").forEach((link) => {
-  const offerTarget = link.getAttribute("data-offer-target");
-  const checkoutUrl = offerTarget ? directCheckoutLinks[offerTarget] : "";
-
-  if (checkoutUrl) {
-    link.href = checkoutUrl;
-    link.removeAttribute("data-offer-target");
-  }
-});
 
 function getSelectedRecommendations() {
   const recommendations = new Set();
@@ -112,18 +94,18 @@ function updateRecommendations() {
 
   if (selectedModules.length === 0) {
     const emptyItem = document.createElement("li");
-    emptyItem.textContent = "No modules selected yet. Choose the areas that apply to see a suggested bundle.";
+    emptyItem.textContent = "No buildout areas selected yet. Choose the areas that apply to see a suggested architecture map.";
     recommendationList.append(emptyItem);
   } else {
     selectedModules.forEach((name) => {
       const module = moduleCatalog[name];
       const item = document.createElement("li");
-      item.innerHTML = `<span>${module.number}</span><strong>${name}</strong><small>${module.focus} - ${formatCurrency(module.price)}</small>`;
+      item.innerHTML = `<span>${module.number}</span><strong>${name}</strong><small>${module.focus} - starts at ${formatCurrency(module.price)}</small>`;
       recommendationList.append(item);
     });
   }
 
-  recommendationTotal.textContent = `Estimated one-time total: ${formatCurrency(total)}`;
+  recommendationTotal.textContent = `Estimated starting project floor: ${formatCurrency(total)}`;
 
   if (recommendedModules instanceof HTMLInputElement) {
     recommendedModules.value = selectedModules.join(", ");
@@ -209,13 +191,55 @@ function validateForm(form) {
   return isValid;
 }
 
-function getFormPayload(form) {
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve({
+      name: file.name,
+      type: file.type,
+      size: file.size,
+      data_url: reader.result,
+    });
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
+}
+
+async function getBrandAssets(form) {
+  const fileInput = form.querySelector("#brand-assets");
+  if (!(fileInput instanceof HTMLInputElement) || !fileInput.files?.length) return [];
+
+  const allowedTypes = new Set(["image/png", "image/jpeg", "image/svg+xml", "application/pdf"]);
+  const maxFiles = 3;
+  const maxBytes = 3 * 1024 * 1024;
+  if (fileInput.files.length > maxFiles) {
+    throw new Error("Please upload no more than 3 brand assets.");
+  }
+
+  const files = Array.from(fileInput.files);
+
+  files.forEach((file) => {
+    if (!allowedTypes.has(file.type)) {
+      throw new Error("Please upload only PNG, JPG, SVG, or PDF brand assets.");
+    }
+
+    if (file.size > maxBytes) {
+      throw new Error("Each brand asset must be 3 MB or smaller.");
+    }
+  });
+
+  return Promise.all(files.map(readFileAsDataUrl));
+}
+
+async function getFormPayload(form) {
   updateRecommendations();
 
   const formData = new FormData(form);
   const payload = {};
 
   formData.forEach((value, key) => {
+    if (value instanceof File) return;
+
     const cleanValue = typeof value === "string" ? value.trim() : value;
     if (!cleanValue) return;
 
@@ -227,6 +251,9 @@ function getFormPayload(form) {
 
     payload[key] = cleanValue;
   });
+
+  const brandAssets = await getBrandAssets(form);
+  if (brandAssets.length) payload.brand_assets = brandAssets;
 
   return payload;
 }
@@ -257,7 +284,7 @@ if (auditForm) {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(getFormPayload(auditForm)),
+        body: JSON.stringify(await getFormPayload(auditForm)),
       });
 
       const result = await response.json().catch(() => ({}));

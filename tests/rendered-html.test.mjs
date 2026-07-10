@@ -30,7 +30,7 @@ test("server-renders The Arcana Systems homepage", async () => {
   const html = await response.text();
   assert.match(html, /Operational architecture for founders/i);
   assert.match(html, /Intelligence\. Elegance\. Impact\./i);
-  assert.match(html, /Explore the Modules/i);
+  assert.match(html, /Explore Custom Buildouts/i);
   assert.match(html, /Start the Guided Assessment/i);
   assert.match(html, /Building systems that move like magic/i);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is building/i);

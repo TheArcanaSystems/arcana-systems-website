@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Take the guided Arcana Systems assessment, request a standard module blueprint, or book a discovery call for a tailored business systems bundle.">
+  <meta name="description" content="Complete the guided Arcana Systems assessment for a custom systems audit, CRM, SaaS, automation, or full architecture buildout. Upload brand assets and share the operational context Caitilin needs.">
   <link rel="canonical" href="https://thearcanasystems.com/contact.html">
   <meta property="og:title" content="Guided Systems Assessment | The Arcana Systems">
-  <meta property="og:description" content="Share your tools, bottlenecks, systems, risks, and goals so Caitilin can recommend the right Arcana Systems module bundle.">
+  <meta property="og:description" content="Share your tools, bottlenecks, systems, risks, goals, and brand assets so Caitilin can scope the right custom systems buildout.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thearcanasystems.com/contact.html">
   <meta property="og:image" content="https://thearcanasystems.com/images/brand-flower-crop.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Guided Systems Assessment | The Arcana Systems">
-  <meta name="twitter:description" content="Request a standard blueprint or complete the guided assessment for a tailored module recommendation.">
+  <meta name="twitter:description" content="Complete the guided assessment for a custom systems audit, architecture buildout, CRM, SaaS, automation, or retainer recommendation.">
   <title>Guided Systems Assessment | The Arcana Systems</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260710-brand">
+  <link rel="stylesheet" href="css/style.css?v=20260710-custom-buildouts">
 </head>
 <body class="product-page">
   <div class="smoke-bg" aria-hidden="true">
@@ -41,7 +41,7 @@
         <div class="intake-heading">
           <p class="eyebrow">Guided Systems Assessment</p>
           <h1>Tell me what your business actually needs.</h1>
-          <p>Use this as a polished application, not a test. Your answers create a suggested module bundle and give me the context to build something tailored instead of generic.</p>
+          <p>Use this as a polished application, not a test. Your answers create a suggested buildout map and give me the context to design the exact system your business needs.</p>
         </div>
 
         <div class="assessment-layout">
@@ -56,8 +56,12 @@
                 <label for="offer-interest">What would you like to do? <span aria-hidden="true">*</span></label>
                 <select id="offer-interest" name="offer_interest" required>
                   <option value="">Select one</option>
-                  <option>Tailored module assessment</option>
-                  <option>Standard module blueprint</option>
+                  <option>Custom systems assessment</option>
+                  <option>Systems audit and architecture roadmap</option>
+                  <option>Modular custom buildout</option>
+                  <option>Full architecture implementation</option>
+                  <option>Custom CRM / SaaS buildout</option>
+                  <option>Systems retainer</option>
                   <option>Discovery call because I am unsure</option>
                   <option>Question before buying</option>
                 </select>
@@ -161,12 +165,21 @@
             </fieldset>
 
             <fieldset>
-              <legend>Modules You Already Know You Want</legend>
+              <legend>Brand &amp; Build Assets</legend>
               <div class="field-row">
-                <label for="module-interest">Specific module interest</label>
-                <input id="module-interest" name="module_interest" type="text" placeholder="Example: Codex, Accord, Flux">
+                <label for="brand-assets">Upload logo or brand assets</label>
+                <input id="brand-assets" name="brand_assets" type="file" accept=".png,.jpg,.jpeg,.svg,.pdf" multiple>
+                <p class="form-note">Upload your logo, brand guide, colors, or screenshots that would help with the build. Up to 3 files, 3 MB each.</p>
               </div>
-              <p class="form-note">The recommendation below is only a guide. You can purchase a standard blueprint, request a tailored bundle, or book a discovery call if you want help choosing.</p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Buildout Areas You Already Know You Want</legend>
+              <div class="field-row">
+                <label for="module-interest">Specific buildout or module interest</label>
+                <input id="module-interest" name="module_interest" type="text" placeholder="Example: custom CRM, client portal, Codex, Accord, Flux">
+              </div>
+              <p class="form-note">The recommendation below is only a guide. It helps surface likely buildout areas; it is not a mandatory bundle or required purchase.</p>
             </fieldset>
 
             <button class="btn btn-gold" type="submit">Send Assessment <span aria-hidden="true">&#10022;</span></button>
@@ -174,12 +187,12 @@
           </form>
 
           <aside class="recommendation-card" aria-live="polite">
-            <p class="eyebrow">Suggested Bundle</p>
-            <h2>Your modules will appear here.</h2>
-            <p>Select the areas that apply and this guide will suggest a starting bundle for review.</p>
+            <p class="eyebrow">Suggested Buildout Map</p>
+            <h2>Your recommended areas will appear here.</h2>
+            <p>Select the areas that apply and this guide will suggest a starting architecture map for review.</p>
             <ul id="recommendation-list"></ul>
-            <strong id="recommendation-total">Estimated one-time total: $0</strong>
-            <a class="btn btn-ghost" href="pricing.html#modules">Browse all modules</a>
+            <strong id="recommendation-total">Estimated starting project floor: $0</strong>
+            <a class="btn btn-ghost" href="pricing.html#modules">Browse buildout lanes</a>
           </aside>
         </div>
       </div>
@@ -207,6 +220,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20260710-brand"></script>
+  <script src="js/script.js?v=20260710-custom-buildouts"></script>
 </body>
 </html>

@@ -8,12 +8,12 @@ const services = [
     copy: "Build the CRM, SOP hub, client portal, dashboard, automation, or operating system the business needs now.",
   },
   {
-    title: "Ongoing Support",
-    copy: "Maintain, refine, document, and optimize the infrastructure after buildout so it stays useful.",
+    title: "CRM / SaaS Systems",
+    copy: "Design practical client portals, internal tools, dashboards, and lightweight SaaS foundations around real operations.",
   },
   {
-    title: "Revenue Activation",
-    copy: "Clean up the client journey from intake, invoice, booking, kickoff, portal, and delivery.",
+    title: "Retainer Support",
+    copy: "Maintain, refine, document, and optimize the infrastructure after buildout so it stays useful.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function Home() {
           <a href="/about.html">About</a>
           <a href="/contact.html">Contact</a>
         </nav>
-        <a className="header-cta" href="/contact.html#interest=Tailored%20module%20assessment">
+        <a className="header-cta" href="/contact.html#interest=Custom%20systems%20assessment">
           Start the Assessment
         </a>
       </header>
@@ -62,9 +62,9 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="/pricing.html">
-              Explore the Modules
+              Explore Custom Buildouts
             </a>
-            <a className="button button-secondary" href="/contact.html#interest=Tailored%20module%20assessment">
+            <a className="button button-secondary" href="/contact.html#interest=Custom%20systems%20assessment">
               Take the Assessment
             </a>
           </div>
@@ -120,11 +120,11 @@ export default function Home() {
       <section className="stack-section">
         <div>
           <p className="eyebrow">Systems First</p>
-          <h2>Microsoft 365 and Notion by design.</h2>
+          <h2>Platform agnostic by design.</h2>
           <p>
-            The Arcana Systems builds operational infrastructure inside tools that support
-            durable delivery. We design the system before the build, then connect workflows,
-            documentation, automations, dashboards, portals, and handoffs.
+            The Arcana Systems builds operational infrastructure inside the tools that make
+            sense for the business. We design the system before the build, then connect
+            workflows, documentation, automations, dashboards, portals, CRMs, and handoffs.
           </p>
         </div>
         <aside>
@@ -172,10 +172,11 @@ export default function Home() {
         <p className="eyebrow">Ready for clarity, structure, and freedom?</p>
         <h2>Ready to build something that actually works?</h2>
         <p>
-          Explore the 22 Arcana modules or complete the guided assessment so your
-          recommended bundle reflects the systems, concerns, and tools actually inside your business.
+          Explore the 22 Arcana buildout lanes, start with a systems audit, or complete the
+          guided assessment so your recommendation reflects the systems, concerns, tools, and
+          brand assets actually inside your business.
         </p>
-        <a className="button button-primary" href="/contact.html#interest=Tailored%20module%20assessment">
+        <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
           Start the Guided Assessment
         </a>
       </section>
