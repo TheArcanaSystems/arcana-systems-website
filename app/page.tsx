@@ -163,7 +163,7 @@ export default function Home() {
 
       <section className="founder-panel">
         <div className="founder-image">
-          <img src="/images/cnelson-headshot.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
+          <img src="/images/cnelson-headshot-clean.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
         </div>
         <div>
           <p className="eyebrow">Founder-Led</p>
