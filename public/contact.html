@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Book your free Arcana Audit, ask about a custom implementation, or send a buyer question. Based in Phoenix, AZ, working with founders across the United States.">
+  <meta name="description" content="Take the guided Arcana Systems assessment, request a standard module blueprint, or book a discovery call for a tailored business systems bundle.">
   <link rel="canonical" href="https://thearcanasystems.com/contact.html">
-  <meta property="og:title" content="Contact | Book a Free Arcana Audit | The Arcana Systems">
-  <meta property="og:description" content="Book your free Arcana Audit, ask about a custom implementation, or send a buyer question.">
+  <meta property="og:title" content="Guided Systems Assessment | The Arcana Systems">
+  <meta property="og:description" content="Share your tools, bottlenecks, systems, risks, and goals so Caitilin can recommend the right Arcana Systems module bundle.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thearcanasystems.com/contact.html">
   <meta property="og:image" content="https://thearcanasystems.com/images/brand-flower-crop.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Book a Free Arcana Audit | The Arcana Systems">
-  <meta name="twitter:description" content="Book your free Arcana Audit, ask about a custom implementation, or send a buyer question.">
-  <title>Contact | Book a Free Arcana Audit | The Arcana Systems</title>
+  <meta name="twitter:title" content="Guided Systems Assessment | The Arcana Systems">
+  <meta name="twitter:description" content="Request a standard blueprint or complete the guided assessment for a tailored module recommendation.">
+  <title>Guided Systems Assessment | The Arcana Systems</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260701-dark-cosmic-v2">
+  <link rel="stylesheet" href="css/style.css?v=20260710-modules">
 </head>
 <body class="product-page">
   <div class="smoke-bg" aria-hidden="true">
@@ -36,47 +36,152 @@
   </header>
 
   <main>
-    <section id="audit-form-section" class="section section-dark final-cta">
-      <div class="container final-panel">
+    <section id="audit-form-section" class="section section-dark final-cta assessment-section">
+      <div class="container final-panel assessment-panel">
         <div class="intake-heading">
-          <p class="eyebrow">Ready for Clarity, Structure, and Freedom?</p>
-          <h1>Book your free Arcana Audit.</h1>
-          <p>Use this form to request the free call, ask about a custom implementation, or send buyer questions.</p>
+          <p class="eyebrow">Guided Systems Assessment</p>
+          <h1>Tell me what your business actually needs.</h1>
+          <p>Use this as a polished application, not a test. Your answers create a suggested module bundle and give me the context to build something tailored instead of generic.</p>
         </div>
-        <form id="audit-form" class="audit-form" action="https://crm.thearcanasystems.com/api/intake" method="post" novalidate>
-          <input type="hidden" name="source" value="Website intake">
-          <div class="field-row">
-            <label for="offer-interest">Interest <span aria-hidden="true">*</span></label>
-            <select id="offer-interest" name="offer_interest" required>
-              <option value="">Select one</option>
-              <option>Free Arcana Audit</option>
-              <option>Custom implementation quote</option>
-              <option>Monthly systems retainer</option>
-              <option>Question before booking the free Arcana Audit Call</option>
-              <option>Question before buying a template</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <label for="company-name">Business name <span aria-hidden="true">*</span></label>
-            <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
-          </div>
-          <div class="field-row two-column">
-            <div class="field">
-              <label for="contact-name">Name <span aria-hidden="true">*</span></label>
-              <input id="contact-name" name="contact_name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
-              <input id="contact-email" name="contact_email" type="email" autocomplete="email" required>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="biggest-bottleneck">What feels the messiest right now?</label>
-            <textarea id="biggest-bottleneck" name="biggest_bottleneck" rows="3"></textarea>
-          </div>
-          <button class="btn btn-gold" type="submit">Send Inquiry <span aria-hidden="true">&#10022;</span></button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+
+        <div class="assessment-layout">
+          <form id="audit-form" class="audit-form assessment-form" action="https://crm.thearcanasystems.com/api/intake" method="post" novalidate>
+            <input type="hidden" name="source" value="Website guided assessment">
+            <input type="hidden" id="recommended-modules" name="recommended_modules" value="">
+            <input type="hidden" id="recommended-total" name="recommended_total" value="">
+
+            <fieldset>
+              <legend>Start Here</legend>
+              <div class="field-row">
+                <label for="offer-interest">What would you like to do? <span aria-hidden="true">*</span></label>
+                <select id="offer-interest" name="offer_interest" required>
+                  <option value="">Select one</option>
+                  <option>Tailored module assessment</option>
+                  <option>Standard module blueprint</option>
+                  <option>Discovery call because I am unsure</option>
+                  <option>Question before buying</option>
+                </select>
+              </div>
+
+              <div class="field-row two-column">
+                <div class="field">
+                  <label for="company-name">Business name <span aria-hidden="true">*</span></label>
+                  <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
+                </div>
+                <div class="field">
+                  <label for="business-stage">Business stage</label>
+                  <select id="business-stage" name="business_stage">
+                    <option value="">Select one</option>
+                    <option>Starting or rebuilding the foundation</option>
+                    <option>Growing and feeling operational strain</option>
+                    <option>Scaling a team or service delivery model</option>
+                    <option>Pivoting, recovering, or reorganizing</option>
+                    <option>Established and ready for stronger architecture</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-row two-column">
+                <div class="field">
+                  <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+                  <input id="contact-name" name="contact_name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+                  <input id="contact-email" name="contact_email" type="email" autocomplete="email" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Where the Friction Lives</legend>
+              <div class="field-row">
+                <label>What are you trying to fix or build?</label>
+                <div class="choice-grid">
+                  <label><input type="checkbox" name="business_needs" value="Onboarding and setup" data-recommend="Genesis"> Onboarding or business setup</label>
+                  <label><input type="checkbox" name="business_needs" value="Automation and tool stack" data-recommend="Alchemist,Flux"> Automation or tool stack cleanup</label>
+                  <label><input type="checkbox" name="business_needs" value="Data and reporting" data-recommend="Oracle,Ascension"> Data, reporting, or KPI visibility</label>
+                  <label><input type="checkbox" name="business_needs" value="Growth and scaling" data-recommend="Cultivator,Foresight"> Growth strategy or scaling</label>
+                  <label><input type="checkbox" name="business_needs" value="Org structure and governance" data-recommend="Sovereign,Fortitude"> Org structure, roles, or governance</label>
+                  <label><input type="checkbox" name="business_needs" value="SOPs and process documentation" data-recommend="Codex"> SOPs or process documentation</label>
+                  <label><input type="checkbox" name="business_needs" value="CRM and client relationships" data-recommend="Accord"> CRM or client relationship flow</label>
+                  <label><input type="checkbox" name="business_needs" value="Project and task management" data-recommend="Vanguard"> Projects, tasks, and handoffs</label>
+                  <label><input type="checkbox" name="business_needs" value="Compliance contracts legal" data-recommend="Scale"> Compliance, contracts, or legal ops</label>
+                  <label><input type="checkbox" name="business_needs" value="Migration integration overhaul" data-recommend="Metamorphosis,Confluence"> Migration, integration, or overhaul</label>
+                  <label><input type="checkbox" name="business_needs" value="Risk crisis bottlenecks" data-recommend="Unchained,Reclaim"> Risk, crisis, or bottleneck removal</label>
+                  <label><input type="checkbox" name="business_needs" value="Full system architecture" data-recommend="Cosmos,Lantern"> Full system architecture</label>
+                </div>
+              </div>
+
+              <div class="field-row two-column">
+                <div class="field">
+                  <label for="biggest-bottleneck">What feels the messiest right now?</label>
+                  <textarea id="biggest-bottleneck" name="biggest_bottleneck" rows="4" placeholder="Example: client onboarding lives in email, invoices are manual, no one knows which task is next..."></textarea>
+                </div>
+                <div class="field">
+                  <label for="desired-outcome">What would feel meaningfully better?</label>
+                  <textarea id="desired-outcome" name="desired_outcome" rows="4" placeholder="Example: cleaner handoffs, better reporting, a single source of truth, fewer manual follow-ups..."></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Systems, Tools, and Concerns</legend>
+              <div class="field-row">
+                <label>Which tools or systems are involved?</label>
+                <div class="choice-grid compact">
+                  <label><input type="checkbox" name="current_tools" value="Microsoft 365"> Microsoft 365</label>
+                  <label><input type="checkbox" name="current_tools" value="SharePoint"> SharePoint</label>
+                  <label><input type="checkbox" name="current_tools" value="Power Automate"> Power Automate</label>
+                  <label><input type="checkbox" name="current_tools" value="Notion"> Notion</label>
+                  <label><input type="checkbox" name="current_tools" value="Airtable"> Airtable</label>
+                  <label><input type="checkbox" name="current_tools" value="ClickUp"> ClickUp</label>
+                  <label><input type="checkbox" name="current_tools" value="Asana"> Asana</label>
+                  <label><input type="checkbox" name="current_tools" value="HubSpot"> HubSpot</label>
+                  <label><input type="checkbox" name="current_tools" value="Stripe"> Stripe</label>
+                  <label><input type="checkbox" name="current_tools" value="Google Workspace"> Google Workspace</label>
+                  <label><input type="checkbox" name="current_tools" value="Zapier or Make"> Zapier or Make</label>
+                  <label><input type="checkbox" name="current_tools" value="Other"> Other / not sure</label>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <label>What concerns should I know about?</label>
+                <div class="choice-grid compact">
+                  <label><input type="checkbox" name="concerns" value="Too many tools"> Too many tools</label>
+                  <label><input type="checkbox" name="concerns" value="Manual work"> Too much manual work</label>
+                  <label><input type="checkbox" name="concerns" value="No documentation"> Missing documentation</label>
+                  <label><input type="checkbox" name="concerns" value="Data quality"> Data quality or reporting gaps</label>
+                  <label><input type="checkbox" name="concerns" value="Team adoption"> Team adoption</label>
+                  <label><input type="checkbox" name="concerns" value="Compliance or privacy"> Compliance or privacy</label>
+                  <label><input type="checkbox" name="concerns" value="Client experience"> Client experience</label>
+                  <label><input type="checkbox" name="concerns" value="Revenue leakage"> Revenue leakage</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Modules You Already Know You Want</legend>
+              <div class="field-row">
+                <label for="module-interest">Specific module interest</label>
+                <input id="module-interest" name="module_interest" type="text" placeholder="Example: Codex, Accord, Flux">
+              </div>
+              <p class="form-note">The recommendation below is only a guide. You can purchase a standard blueprint, request a tailored bundle, or book a discovery call if you want help choosing.</p>
+            </fieldset>
+
+            <button class="btn btn-gold" type="submit">Send Assessment <span aria-hidden="true">&#10022;</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="recommendation-card" aria-live="polite">
+            <p class="eyebrow">Suggested Bundle</p>
+            <h2>Your modules will appear here.</h2>
+            <p>Select the areas that apply and this guide will suggest a starting bundle for review.</p>
+            <ul id="recommendation-list"></ul>
+            <strong id="recommendation-total">Estimated one-time total: $0</strong>
+            <a class="btn btn-ghost" href="pricing.html#modules">Browse all modules</a>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -84,8 +189,8 @@
       <div class="container contact-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Ready for operations that finally feel clear?</h2>
-          <p class="section-copy">Start with a discovery note. We will route you to the right next step: audit, custom build, or systems support.</p>
+          <h2>Still unsure? Book the discovery call path.</h2>
+          <p class="section-copy">If the assessment raises more questions than answers, that is useful information. Choose the discovery option above and I will help you decide what belongs in the build.</p>
         </div>
         <address class="contact-card">
           <p><strong>Email</strong><br><a href="mailto:discovery@thearcanasystems.com">discovery@thearcanasystems.com</a></p>
@@ -102,6 +207,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20260701-dark-cosmic-v2"></script>
+  <script src="js/script.js?v=20260710-modules"></script>
 </body>
 </html>

@@ -1876,6 +1876,272 @@ ul {
   color: var(--text-soft);
 }
 
+/* ---- Module catalog and guided assessment ---- */
+
+.modules-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.46fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.modules-hero h1 {
+  max-width: 11ch;
+}
+
+.module-total-card,
+.recommendation-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 150, 67, 0.22);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(224, 85, 158, 0.13), transparent 14rem),
+    rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+}
+
+.module-total-card strong {
+  display: block;
+  margin-bottom: 0.85rem;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.module-total-card p:last-child,
+.modules-assessment-cta p {
+  color: var(--text-soft);
+}
+
+.module-group {
+  margin-top: 2.4rem;
+}
+
+.module-group-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(201, 150, 67, 0.18);
+}
+
+.module-group-heading h3 {
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.module-card {
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+  min-height: 310px;
+  padding: 1.2rem;
+  border: 1px solid rgba(201, 150, 67, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(157, 111, 224, 0.12), transparent 10rem),
+    rgba(28, 15, 46, 0.34);
+  box-shadow: var(--shadow);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.module-card:hover {
+  border-color: rgba(201, 150, 67, 0.42);
+  transform: translateY(-2px);
+}
+
+.module-number {
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.module-card h3 {
+  color: var(--plum);
+  font-size: 2rem;
+}
+
+.module-card p {
+  min-height: 3.2rem;
+  color: var(--text-soft);
+}
+
+.module-card strong {
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+
+.module-card .btn {
+  align-self: end;
+  width: 100%;
+}
+
+.assessment-section {
+  text-align: left;
+}
+
+.assessment-panel {
+  max-width: 1180px;
+}
+
+.assessment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.assessment-form fieldset {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(245, 229, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.assessment-form fieldset + fieldset {
+  margin-top: 0.35rem;
+}
+
+.assessment-form legend {
+  padding: 0 0.4rem;
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.choice-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.choice-grid label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem;
+  align-items: start;
+  min-height: 52px;
+  padding: 0.72rem 0.8rem;
+  color: var(--text);
+  border: 1px solid rgba(245, 229, 255, 0.16);
+  border-radius: 6px;
+  background: rgba(18, 8, 29, 0.38);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.choice-grid input {
+  width: 1rem;
+  min-height: auto;
+  margin: 0.2rem 0 0;
+  accent-color: var(--gold);
+}
+
+.form-note {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.recommendation-card {
+  position: sticky;
+  top: 96px;
+}
+
+.recommendation-card h2 {
+  color: #fff;
+  font-size: 2.8rem;
+}
+
+.recommendation-card p {
+  color: var(--text-soft);
+}
+
+.recommendation-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recommendation-card li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(201, 150, 67, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.recommendation-card li span {
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.recommendation-card li strong {
+  color: var(--plum);
+}
+
+.recommendation-card li small {
+  color: var(--text-soft);
+}
+
+.recommendation-card > strong {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+@media (max-width: 1080px) {
+  .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modules-hero-grid,
+  .assessment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    position: static;
+  }
+}
+
+@media (max-width: 820px) {
+  .choice-grid,
+  .choice-grid.compact,
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-group-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

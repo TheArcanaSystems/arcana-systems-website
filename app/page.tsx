@@ -46,8 +46,8 @@ export default function Home() {
           <a href="/about.html">About</a>
           <a href="/contact.html">Contact</a>
         </nav>
-        <a className="header-cta" href="/contact.html#interest=Free%20Arcana%20Audit">
-          Start Your Arcana Audit
+        <a className="header-cta" href="/contact.html#interest=Tailored%20module%20assessment">
+          Start the Assessment
         </a>
       </header>
 
@@ -61,11 +61,11 @@ export default function Home() {
             that make growth easier to hold.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/contact.html#interest=Free%20Arcana%20Audit">
-              Start Your Arcana Audit
+            <a className="button button-primary" href="/pricing.html">
+              Explore the Modules
             </a>
-            <a className="button button-secondary" href="/services.html">
-              View Services
+            <a className="button button-secondary" href="/contact.html#interest=Tailored%20module%20assessment">
+              Take the Assessment
             </a>
           </div>
         </div>
@@ -172,11 +172,11 @@ export default function Home() {
         <p className="eyebrow">Ready for clarity, structure, and freedom?</p>
         <h2>Ready to build something that actually works?</h2>
         <p>
-          Start with the Arcana Audit and walk away with a clear map of what needs to be
-          fixed, automated, documented, or rebuilt.
+          Explore the 22 Arcana modules or complete the guided assessment so your
+          recommended bundle reflects the systems, concerns, and tools actually inside your business.
         </p>
-        <a className="button button-primary" href="/contact.html#interest=Free%20Arcana%20Audit">
-          Start Your Arcana Audit
+        <a className="button button-primary" href="/contact.html#interest=Tailored%20module%20assessment">
+          Start the Guided Assessment
         </a>
       </section>
 
