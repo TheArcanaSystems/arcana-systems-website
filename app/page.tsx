@@ -1,142 +1,141 @@
-const services = [
+const buildoutPaths = [
   {
     title: "Systems Audit",
-    copy: "Diagnose workflow friction, documentation gaps, tool sprawl, and the next highest-leverage fix.",
+    copy: "A clear diagnostic of your workflows, tools, bottlenecks, data, risks, and highest-leverage next build.",
   },
   {
     title: "Custom Buildout",
-    copy: "Build the CRM, SOP hub, client portal, dashboard, automation, or operating system the business needs now.",
+    copy: "CRM, portal, SOP hub, dashboard, automation layer, internal tool, or SaaS foundation built around your business.",
   },
   {
-    title: "CRM / SaaS Systems",
-    copy: "Design practical client portals, internal tools, dashboards, and lightweight SaaS foundations around real operations.",
-  },
-  {
-    title: "Retainer Support",
-    copy: "Maintain, refine, document, and optimize the infrastructure after buildout so it stays useful.",
+    title: "Architecture Retainer",
+    copy: "Ongoing systems support for founders who need implementation, maintenance, documentation, and refinement every month.",
   },
 ];
 
+const signals = [
+  "Client delivery lives across too many places.",
+  "Your CRM does not match how you actually sell or serve.",
+  "SOPs are missing, outdated, or ignored.",
+  "Reporting is scattered, manual, or impossible to trust.",
+  "You need a custom internal tool or SaaS workflow, not another generic app.",
+];
+
 const method = [
-  ["Intake", "Capture the operational friction before the call."],
-  ["Diagnose", "Review workflows, tools, documentation, and decisions."],
-  ["Blueprint", "Map the architecture before a single workflow is rebuilt."],
-  ["Build", "Create the portal, SOP hub, automation, dashboard, or operating system."],
-  ["Steward", "Keep the system current through refinement, maintenance, and support."],
+  ["Read", "Understand the real operating pattern before choosing tools."],
+  ["Architect", "Map workflows, data, ownership, automations, and handoffs."],
+  ["Build", "Implement the system inside the platform that fits the business."],
+  ["Steward", "Refine, document, maintain, and expand the system over time."],
+];
+
+const modules = [
+  "CRM Architecture",
+  "Client Portals",
+  "SOP Libraries",
+  "Dashboards",
+  "Workflow Automation",
+  "SaaS Foundations",
+  "Retainer Support",
+  "Full System Design",
 ];
 
 export default function Home() {
   return (
-    <main className="site-shell">
-      <div className="smoke-field" aria-hidden="true">
-        <span className="smoke-orb smoke-orb-one" />
-        <span className="smoke-orb smoke-orb-two" />
-        <span className="smoke-orb smoke-orb-three" />
-        <span className="smoke-ribbon smoke-ribbon-one" />
-        <span className="smoke-ribbon smoke-ribbon-two" />
+    <main className="arcana-home">
+      <div className="atmosphere" aria-hidden="true">
+        <span className="smoke smoke-one" />
+        <span className="smoke smoke-two" />
+        <span className="smoke smoke-three" />
+        <span className="stardust stardust-one" />
+        <span className="stardust stardust-two" />
+        <span className="petal petal-one" />
+        <span className="petal petal-two" />
+        <span className="petal petal-three" />
       </div>
 
-      <header className="site-header">
+      <header className="site-header" aria-label="The Arcana Systems">
         <a className="brand-lockup" href="/" aria-label="The Arcana Systems home">
-          <img src="/images/arcana-systems-logo.png" alt="The Arcana Systems" />
+          <span>The Arcana</span>
+          <small>Systems</small>
         </a>
         <nav aria-label="Primary navigation">
           <a href="/services.html">Services</a>
-          <a href="/pricing.html">Pricing</a>
+          <a href="/pricing.html">Buildouts</a>
           <a href="/about.html">About</a>
           <a href="/contact.html">Contact</a>
         </nav>
         <a className="header-cta" href="/contact.html#interest=Custom%20systems%20assessment">
-          Start the Assessment
+          Start Assessment
         </a>
       </header>
 
       <section className="hero-section">
+        <div className="hero-art" aria-hidden="true">
+          <img src="/images/tas-brand-hero.png" alt="" />
+        </div>
         <div className="hero-copy">
-          <p className="eyebrow">Intelligence. Elegance. Impact.</p>
-          <h1>Operational architecture for founders who have outgrown duct-taped workflows.</h1>
+          <p className="eyebrow">Platform-agnostic systems architecture</p>
+          <h1>Custom operating systems for businesses ready to move like magic.</h1>
           <p className="hero-lead">
-            The Arcana Systems designs the structure beneath the work: workflows, SOPs,
-            automations, client portals, dashboards, handoffs, and business operating systems
-            that make growth easier to hold.
+            The Arcana Systems audits, architects, and builds the backend of your business:
+            CRMs, client portals, SOP libraries, dashboards, automations, internal tools,
+            SaaS foundations, and ongoing systems support.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/pricing.html">
+            <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
+              Start the Guided Assessment
+            </a>
+            <a className="button button-secondary" href="/pricing.html">
               Explore Custom Buildouts
             </a>
-            <a className="button button-secondary" href="/contact.html#interest=Custom%20systems%20assessment">
-              Take the Assessment
-            </a>
-          </div>
-        </div>
-        <div className="hero-brand-card" aria-label="The Arcana Systems brand card">
-          <img src="/images/arcana-reference-hero.png" alt="" aria-hidden="true" />
-          <div className="brand-card-panel">
-            <span>Building systems that move like magic</span>
-            <strong>Clarity. Structure. Freedom.</strong>
           </div>
         </div>
       </section>
 
-      <section className="problem-section section-band">
+      <section className="oracle-strip" aria-label="What The Arcana Systems builds">
+        <span>Audit</span>
+        <span>Architecture</span>
+        <span>Implementation</span>
+        <span>Retainer</span>
+      </section>
+
+      <section className="section-panel intro-panel">
         <div className="section-intro">
-          <p className="eyebrow">The Hidden Friction</p>
-          <h2>Your business grew. Your backend did not.</h2>
+          <p className="eyebrow">The Work</p>
+          <h2>Not templates. Not tool worship. Actual systems built around your business.</h2>
           <p>
-            Most growing businesses are held together by inboxes, spreadsheets, memory,
-            scattered files, and the founder&apos;s ability to keep every moving part in their head.
-            The work gets done, but the way it gets done is fragile.
+            You bring the messy reality: scattered tools, unclear handoffs, manual work,
+            missing documentation, client experience gaps, or a system idea that needs to
+            become real. I turn that into architecture, then implementation.
           </p>
         </div>
-        <div className="friction-grid">
-          <article>Client onboarding changes from project to project.</article>
-          <article>SOPs are missing, outdated, or buried where no one looks.</article>
-          <article>Follow-up depends on manual reminders and personal memory.</article>
-          <article>Team members create workarounds because the real workflow is unclear.</article>
-          <article>The founder becomes the default routing system for every decision.</article>
-        </div>
-      </section>
-
-      <section className="services-section section-band">
-        <div className="section-intro narrow">
-          <p className="eyebrow">Operational Infrastructure</p>
-          <h2>Built with precision, designed to feel calm.</h2>
-          <p>
-            We architect practical, elegant systems that bring your people, processes, tools,
-            and information into one coherent way of working.
-          </p>
-        </div>
-        <div className="service-grid">
-          {services.map((service) => (
-            <article key={service.title} className="service-card">
-              <span aria-hidden="true">*</span>
-              <h3>{service.title}</h3>
-              <p>{service.copy}</p>
+        <div className="path-grid">
+          {buildoutPaths.map((path) => (
+            <article key={path.title} className="glass-card">
+              <span aria-hidden="true">✦</span>
+              <h3>{path.title}</h3>
+              <p>{path.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="stack-section">
+      <section className="dark-panel split-panel">
         <div>
-          <p className="eyebrow">Systems First</p>
-          <h2>Platform agnostic by design.</h2>
-          <p>
-            The Arcana Systems builds operational infrastructure inside the tools that make
-            sense for the business. We design the system before the build, then connect
-            workflows, documentation, automations, dashboards, portals, CRMs, and handoffs.
-          </p>
+          <p className="eyebrow">When You Need This</p>
+          <h2>Your business is asking for structure.</h2>
         </div>
-        <aside>
-          <p>Your tools should support the architecture.</p>
-          <strong>They should never become the architecture.</strong>
-        </aside>
+        <ul className="signal-list">
+          {signals.map((signal) => (
+            <li key={signal}>{signal}</li>
+          ))}
+        </ul>
       </section>
 
-      <section className="method-section section-band">
+      <section className="section-panel method-panel">
         <div className="section-intro">
           <p className="eyebrow">The Arcana Method</p>
-          <h2>Diagnose the chaos. Architect the flow. Build what holds.</h2>
+          <h2>Read the system. Architect the flow. Build what holds.</h2>
         </div>
         <ol className="method-track">
           {method.map(([title, copy]) => (
@@ -148,33 +147,42 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="founder-section">
+      <section className="dark-panel modules-panel">
+        <div className="section-intro">
+          <p className="eyebrow">Buildout Lanes</p>
+          <h2>Choose the system you need built, not the platform you think you need.</h2>
+        </div>
+        <div className="module-cloud">
+          {modules.map((module) => (
+            <a key={module} href="/pricing.html">
+              {module}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="founder-panel">
         <div className="founder-image">
           <img src="/images/cnelson-headshot.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
         </div>
-        <div className="founder-copy">
-          <p className="eyebrow">Founder Preview</p>
-          <h2>Meet the architect behind the magic.</h2>
+        <div>
+          <p className="eyebrow">Founder-Led</p>
+          <h2>Built personally, with the judgment your operations deserve.</h2>
           <p>
-            Behind The Arcana Systems is Caitilin Nelson, a systems architect with more than
-            two decades of experience across recruiting, operations, administration, client
-            service, finance, executive support, and technology.
-          </p>
-          <p>
-            Her work is rooted in a simple belief: the purpose of systems is not just
-            efficiency. It is freedom.
+            I lead the assessment, architecture, and implementation so the system is not
+            merely pretty. It has to work for your real clients, your real tools, and your
+            real capacity.
           </p>
           <a className="text-link" href="/about.html">Read Caitilin&apos;s story</a>
         </div>
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">Ready for clarity, structure, and freedom?</p>
-        <h2>Ready to build something that actually works?</h2>
+        <p className="eyebrow">Start Here</p>
+        <h2>Tell me what your business actually needs.</h2>
         <p>
-          Explore the 22 Arcana buildout lanes, start with a systems audit, or complete the
-          guided assessment so your recommendation reflects the systems, concerns, tools, and
-          brand assets actually inside your business.
+          The guided assessment is a scoping tool, not a forced bundle. Share your tools,
+          pain points, concerns, goals, and logo so I can recommend the right build.
         </p>
         <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
           Start the Guided Assessment

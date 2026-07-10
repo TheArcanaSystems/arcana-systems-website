@@ -28,8 +28,8 @@ test("server-renders The Arcana Systems homepage", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Operational architecture for founders/i);
-  assert.match(html, /Intelligence\. Elegance\. Impact\./i);
+  assert.match(html, /Custom operating systems for businesses ready to move like magic/i);
+  assert.match(html, /Platform-agnostic systems architecture/i);
   assert.match(html, /Explore Custom Buildouts/i);
   assert.match(html, /Start the Guided Assessment/i);
   assert.match(html, /Building systems that move like magic/i);
