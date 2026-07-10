@@ -2565,3 +2565,385 @@ li,
     height: 44px;
   }
 }
+
+/* ---- Arcana atmosphere: align static pages with the rebuilt homepage ---- */
+
+:root {
+  --bg: #080513;
+  --bg-soft: #12091f;
+  --surface: rgba(255, 255, 255, 0.075);
+  --surface-soft: rgba(255, 255, 255, 0.12);
+  --surface-muted: rgba(255, 255, 255, 0.045);
+  --text: #f6eefb;
+  --text-soft: rgba(246, 238, 251, 0.66);
+  --plum: #a15bc9;
+  --plum-deep: #12091f;
+  --royal-violet: #6d45a0;
+  --gold: #d3a25f;
+  --gold-bright: #f3c98a;
+  --magenta: #e05c9b;
+  --magenta-bright: #ff8bce;
+  --violet-glow: #b491ff;
+  --line: rgba(243, 201, 138, 0.24);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+  --shadow-deep: 0 30px 90px rgba(0, 0, 0, 0.45);
+}
+
+body,
+body.product-page,
+.arcana-refresh {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(109, 69, 160, 0.42), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(224, 92, 155, 0.28), transparent 30rem),
+    linear-gradient(180deg, #11091f 0%, #080513 44%, #130921 100%);
+}
+
+body.product-page::before {
+  content: "";
+  position: fixed;
+  inset: -10vh 0 auto;
+  z-index: 0;
+  height: 120vh;
+  pointer-events: none;
+  opacity: 0.6;
+  background-image:
+    radial-gradient(circle, rgba(255, 194, 133, 0.8) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(246, 238, 251, 0.58) 0 1px, transparent 1.5px);
+  background-position: 0 0, 42px 62px;
+  background-size: 140px 180px, 190px 230px;
+  animation: stardustFallStatic 42s linear infinite;
+}
+
+body.product-page::after {
+  content: "";
+  position: fixed;
+  left: 12vw;
+  top: -6rem;
+  z-index: 0;
+  width: 16px;
+  height: 10px;
+  border-radius: 70% 30% 70% 30%;
+  pointer-events: none;
+  opacity: 0.72;
+  background: linear-gradient(135deg, rgba(245, 165, 214, 0.96), rgba(116, 74, 170, 0.44));
+  box-shadow:
+    32vw -3rem 0 rgba(224, 92, 155, 0.46),
+    64vw 2rem 0 rgba(180, 145, 255, 0.42);
+  animation: petalFallStatic 24s ease-in-out infinite;
+}
+
+@keyframes stardustFallStatic {
+  from { transform: translate3d(0, -14vh, 0); }
+  to { transform: translate3d(0, 14vh, 0); }
+}
+
+@keyframes petalFallStatic {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.74; }
+  55% { transform: translate3d(7vw, 48vh, 0) rotate(190deg); }
+  100% { transform: translate3d(-4vw, 112vh, 0) rotate(390deg); opacity: 0; }
+}
+
+.smoke-bg,
+.smoke-blob,
+.smoke-ribbon {
+  display: block !important;
+}
+
+.smoke-blob {
+  opacity: 0.5;
+  filter: blur(48px);
+  mix-blend-mode: screen;
+}
+
+.smoke-blob--1 {
+  background: radial-gradient(circle, rgba(180, 145, 255, 0.72), transparent 68%);
+}
+
+.smoke-blob--2 {
+  background: radial-gradient(circle, rgba(224, 92, 155, 0.68), transparent 70%);
+}
+
+.smoke-blob--3 {
+  background: radial-gradient(circle, rgba(65, 113, 190, 0.46), transparent 68%);
+}
+
+.smoke-blob--4 {
+  background: radial-gradient(circle, rgba(255, 139, 206, 0.44), transparent 68%);
+}
+
+h1,
+h2,
+h3,
+h4,
+.founder-quote,
+.product-hero h1,
+.modules-hero h1,
+.assessment-section h1,
+.assessment-section h2,
+.recommendation-card h2 {
+  color: var(--text);
+}
+
+h1,
+.product-hero h1,
+.modules-hero h1 {
+  font-size: clamp(3.4rem, 6vw, 5.8rem);
+  line-height: 0.98;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 4.5vw, 4.6rem);
+}
+
+p,
+li,
+.section-copy,
+.hero-lead,
+.product-hero .lead,
+.offer-card p,
+.offer-card li,
+.about-panel p,
+.faq-list p,
+.contact-card,
+.product-footer,
+.site-footer {
+  color: var(--text-soft);
+}
+
+.eyebrow,
+.offer-label,
+.module-number,
+.gold-text,
+.assessment-form legend {
+  color: var(--gold-bright);
+}
+
+.product-header,
+.home-page .site-header {
+  background: rgba(8, 5, 19, 0.78);
+  border-bottom: 1px solid rgba(243, 201, 138, 0.18);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.logo-image,
+.refresh-header .logo-image {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.logo-brand,
+.product-header .logo-brand,
+.site-nav a,
+.back-link,
+.product-header .back-link {
+  color: var(--text);
+}
+
+.logo-brand span,
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--gold-bright);
+}
+
+.btn {
+  border-radius: 999px;
+}
+
+.btn-gold {
+  color: #1f1029;
+  background: linear-gradient(135deg, #f9d095, var(--gold));
+  border-color: rgba(243, 201, 138, 0.5);
+  box-shadow: 0 16px 34px rgba(211, 162, 95, 0.22);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(243, 201, 138, 0.35);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  color: #1f1029;
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+.product-hero,
+.refresh-hero,
+.section-obsidian.modules-hero {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 80% 12%, rgba(224, 92, 155, 0.22), transparent 28rem),
+    radial-gradient(circle at 12% 18%, rgba(180, 145, 255, 0.18), transparent 26rem),
+    linear-gradient(135deg, rgba(28, 13, 45, 0.9), rgba(13, 7, 23, 0.88)),
+    url("../images/tas-brand-hero.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.product-hero::before,
+.section-dark::before,
+.section-night::before,
+.section-light::before,
+.section-soft::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(180, 145, 255, 0.14), transparent 22rem),
+    radial-gradient(circle at 82% 18%, rgba(224, 92, 155, 0.12), transparent 24rem);
+}
+
+.product-hero > .container,
+.section-dark > .container,
+.section-night > .container,
+.section-light > .container,
+.section-soft > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section,
+.refresh-band,
+.section-light,
+.section-soft,
+.contact-section,
+.section-platform {
+  background: transparent;
+}
+
+.section-dark,
+.section-night,
+.final-cta,
+.refresh-stack {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(243, 201, 138, 0.1), transparent 18rem),
+    linear-gradient(135deg, rgba(20, 9, 33, 0.86), rgba(54, 22, 72, 0.64));
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-night h2,
+.section-night h3,
+.section-night p,
+.final-cta h2,
+.final-cta p,
+.refresh-stack h2,
+.refresh-stack p {
+  color: inherit;
+}
+
+.friction-grid article,
+.service-card,
+.method-track li,
+.standard-card,
+.pillar-card,
+.offer-card,
+.founder-card,
+.faq-list details,
+.contact-card,
+.module-card,
+.module-total-card,
+.recommendation-card,
+.experience-steps article,
+.outcome-card,
+.method-item,
+.credit-panel,
+.product-suite,
+.styled-box,
+.final-panel,
+.assessment-form fieldset,
+.product-grid article {
+  border: 1px solid rgba(243, 201, 138, 0.22);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(243, 201, 138, 0.08), transparent 12rem),
+    rgba(255, 255, 255, 0.075);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.module-card {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(161, 91, 201, 0.14), transparent 10rem),
+    rgba(255, 255, 255, 0.07);
+}
+
+.service-card h3,
+.method-track span,
+.module-card h3,
+.product-grid strong,
+.pillar-card h3,
+.offer-card h3,
+.about-cta h3,
+.experience-steps h3,
+.faq-list summary,
+.recommendation-card li strong {
+  color: var(--gold-bright);
+}
+
+.module-card p,
+.service-card p,
+.method-track p,
+.experience-steps p,
+.recommendation-card p,
+.recommendation-card li small,
+.form-note {
+  color: var(--text-soft);
+}
+
+.choice-grid label,
+.audit-form input,
+.audit-form select,
+.audit-form textarea {
+  color: var(--text);
+  border-color: rgba(243, 201, 138, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.audit-form input::placeholder,
+.audit-form textarea::placeholder {
+  color: rgba(246, 238, 251, 0.48);
+}
+
+.tool-list li {
+  color: var(--text);
+  border-color: rgba(243, 201, 138, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.product-image,
+.founder-card img {
+  border-radius: 20px;
+}
+
+.product-footer,
+.site-footer {
+  border-top: 1px solid rgba(243, 201, 138, 0.16);
+  background: rgba(8, 5, 19, 0.72);
+}
+
+@media (max-width: 820px) {
+  h1,
+  .product-hero h1,
+  .modules-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .product-header .container,
+  .product-footer .container {
+    align-items: flex-start;
+  }
+}
