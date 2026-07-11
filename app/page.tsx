@@ -39,6 +39,19 @@ const modules = [
   "Full System Design",
 ];
 
+const laneDetails = [
+  ["Audit", "Find the bottlenecks, risks, and highest-leverage build before choosing tools."],
+  ["Build", "Implement CRM, portals, dashboards, automations, SOP hubs, or internal systems."],
+  ["Document", "Deliver SOPs, handoff notes, permissions, and operating guidance."],
+  ["Steward", "Keep systems maintained, refined, and expanded as the business changes."],
+];
+
+const founderNotes = [
+  "Architecture before platform selection",
+  "Human judgment over generic automation",
+  "Documentation and handoff included",
+];
+
 export default function Home() {
   return (
     <main className="arcana-home">
@@ -137,6 +150,11 @@ export default function Home() {
         <div className="section-intro">
           <p className="eyebrow">The Arcana Method</p>
           <h2>Read the system. Architect the flow. Build what holds.</h2>
+          <p className="section-kicker">
+            A practical sequence for turning operational fog into usable architecture:
+            understand the pattern, map the system, implement it cleanly, then keep it
+            alive as the business changes.
+          </p>
         </div>
         <ol className="method-track">
           {method.map(([title, copy]) => (
@@ -153,6 +171,14 @@ export default function Home() {
           <p className="eyebrow">Buildout Lanes</p>
           <h2>Choose the business system you need built. The platform comes after the architecture.</h2>
         </div>
+        <div className="lane-detail-grid" aria-label="What each buildout can include">
+          {laneDetails.map(([title, copy]) => (
+            <article key={title}>
+              <span>{title}</span>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
         <div className="module-cloud">
           {modules.map((module) => (
             <a key={module} href="/pricing.html">
@@ -166,7 +192,7 @@ export default function Home() {
         <div className="founder-image">
           <img src="/images/cnelson-headshot-clean.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
         </div>
-        <div>
+        <div className="founder-copy">
           <p className="eyebrow">Founder-Led</p>
           <h2>Built personally, with the judgment your operations deserve.</h2>
           <p>
@@ -174,6 +200,11 @@ export default function Home() {
             merely pretty. It has to work for your real clients, your real tools, and your
             real capacity.
           </p>
+          <ul className="founder-notes">
+            {founderNotes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
           <a className="text-link" href="/about.html">Read Caitilin&apos;s story</a>
         </div>
       </section>

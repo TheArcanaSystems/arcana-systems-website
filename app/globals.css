@@ -205,10 +205,11 @@ footer {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(180px, 260px) 1fr auto;
   align-items: center;
   gap: 1.5rem;
-  padding: 0.85rem 0;
+  width: 100%;
+  padding: 0.85rem clamp(1rem, 3vw, 2rem);
   background: rgba(8, 5, 19, 0.68);
   border-bottom: 1px solid rgba(243, 201, 138, 0.18);
   backdrop-filter: blur(18px);
@@ -239,7 +240,7 @@ footer {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.25rem;
   flex-wrap: wrap;
   color: var(--soft-mist);
@@ -577,30 +578,80 @@ h3 {
 .method-panel .section-intro {
   display: grid;
   grid-template-columns: minmax(360px, 0.86fr) minmax(320px, 1fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: end;
+  gap: clamp(1.4rem, 3.4vw, 3rem);
+  align-items: center;
   max-width: none;
 }
 
+.method-panel .section-intro .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -0.3rem;
+}
+
 .method-panel .section-intro h2 {
-  max-width: 14.5ch;
-  font-size: clamp(2.8rem, 4.2vw, 4.65rem);
+  max-width: 16ch;
+  font-size: clamp(2.65rem, 3.9vw, 4.25rem);
   line-height: 0.98;
 }
 
-.method-panel .section-intro::after {
-  content: "A practical sequence for turning operational fog into usable architecture: understand the pattern, map the system, implement it cleanly, then keep it alive as the business changes.";
+.section-kicker {
+  margin: 0;
   max-width: 58ch;
   color: var(--muted-mist);
   font-size: 1.02rem;
   line-height: 1.65;
 }
 
+.modules-panel {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.74fr) minmax(420px, 1fr);
+  gap: clamp(1.3rem, 3.2vw, 3rem);
+  align-items: start;
+}
+
+.modules-panel .section-intro {
+  max-width: 620px;
+}
+
+.modules-panel .section-intro h2 {
+  max-width: 13ch;
+  font-size: clamp(2.55rem, 3.8vw, 4.15rem);
+}
+
+.lane-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.lane-detail-grid article {
+  min-height: 138px;
+  padding: 1rem;
+  border: 1px solid rgba(243, 201, 138, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.lane-detail-grid span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--pale-gold);
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.lane-detail-grid p {
+  margin: 0;
+  color: var(--muted-mist);
+}
+
 .module-cloud {
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
 }
 
 .module-cloud a {
@@ -621,8 +672,8 @@ h3 {
 
 .founder-panel {
   display: grid;
-  grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 3vw, 2.6rem);
   align-items: center;
   background:
     radial-gradient(circle at 18% 24%, rgba(224, 92, 155, 0.18), transparent 18rem),
@@ -642,6 +693,45 @@ h3 {
   object-fit: cover;
   object-position: center top;
   border-radius: 20px;
+}
+
+.founder-copy {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.86fr) minmax(220px, 0.6fr);
+  column-gap: clamp(1.2rem, 3vw, 2.8rem);
+  align-items: center;
+}
+
+.founder-copy .eyebrow,
+.founder-copy h2,
+.founder-copy > p,
+.founder-copy .text-link {
+  grid-column: 1;
+}
+
+.founder-copy h2 {
+  max-width: 13.5ch;
+  font-size: clamp(2.65rem, 4vw, 4.35rem);
+}
+
+.founder-notes {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.founder-notes li {
+  padding: 0.85rem 0.95rem;
+  color: var(--soft-mist);
+  border: 1px solid rgba(243, 201, 138, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 .text-link {
@@ -678,6 +768,7 @@ footer {
   .site-header,
   .hero-section,
   .intro-panel,
+  .modules-panel,
   .split-panel,
   .founder-panel {
     grid-template-columns: 1fr;
@@ -706,6 +797,26 @@ footer {
 
   .intro-panel .path-grid {
     grid-template-columns: 1fr;
+  }
+
+  .method-panel .section-intro,
+  .founder-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .method-panel .section-intro .eyebrow,
+  .founder-copy .eyebrow,
+  .founder-copy h2,
+  .founder-copy > p,
+  .founder-copy .text-link,
+  .founder-notes {
+    grid-column: 1;
+  }
+
+  .founder-notes {
+    grid-row: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 0.4rem;
   }
 }
 
@@ -745,8 +856,10 @@ footer {
   }
 
   .oracle-strip,
+  .lane-detail-grid,
   .path-grid,
-  .method-track {
+  .method-track,
+  .founder-notes {
     grid-template-columns: 1fr;
   }
 
