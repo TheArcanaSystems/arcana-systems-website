@@ -552,14 +552,14 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  margin: 2.25rem 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .method-track li {
-  min-height: 210px;
-  padding: 1.2rem;
+  min-height: 180px;
+  padding: 1rem;
   border: 1px solid rgba(243, 201, 138, 0.2);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.07);
@@ -567,11 +567,33 @@ h3 {
 
 .method-track span {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   color: var(--pale-gold);
   font-family: var(--serif);
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 2.8vw, 2.25rem);
   line-height: 1;
+}
+
+.method-panel .section-intro {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.86fr) minmax(320px, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  max-width: none;
+}
+
+.method-panel .section-intro h2 {
+  max-width: 14.5ch;
+  font-size: clamp(2.8rem, 4.2vw, 4.65rem);
+  line-height: 0.98;
+}
+
+.method-panel .section-intro::after {
+  content: "A practical sequence for turning operational fog into usable architecture: understand the pattern, map the system, implement it cleanly, then keep it alive as the business changes.";
+  max-width: 58ch;
+  color: var(--muted-mist);
+  font-size: 1.02rem;
+  line-height: 1.65;
 }
 
 .module-cloud {
