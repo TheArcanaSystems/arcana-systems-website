@@ -1,15 +1,15 @@
 const buildoutPaths = [
   {
     title: "Systems Audit",
-    copy: "A clear diagnostic of your workflows, tools, bottlenecks, data, risks, and highest-leverage next build.",
+    copy: "A paid diagnostic that maps your workflows, tools, bottlenecks, risks, and highest-leverage next build.",
   },
   {
     title: "Custom Buildout",
-    copy: "CRM, portal, SOP hub, dashboard, automation layer, internal tool, or SaaS foundation built around your business.",
+    copy: "A scoped CRM, portal, SOP hub, dashboard, automation layer, internal tool, or SaaS workflow built around your business.",
   },
   {
     title: "Architecture Retainer",
-    copy: "Ongoing systems support for founders who need implementation, maintenance, documentation, and refinement every month.",
+    copy: "Ongoing systems stewardship for founders who need maintenance, documentation, refinement, and new build support.",
   },
 ];
 
@@ -75,11 +75,11 @@ export default function Home() {
         </div>
         <div className="hero-copy">
           <p className="eyebrow">Platform-agnostic systems architecture</p>
-          <h1>Custom operating systems for businesses ready to move like magic.</h1>
+          <h1>Custom systems architecture and implementation for businesses ready to move like magic.</h1>
           <p className="hero-lead">
-            The Arcana Systems audits, architects, and builds the backend of your business:
-            CRMs, client portals, SOP libraries, dashboards, automations, internal tools,
-            SaaS foundations, and ongoing systems support.
+            Choose a focused buildout, start with a systems audit, or retain ongoing support.
+            The Arcana Systems audits, architects, builds, documents, and hands over custom
+            operational infrastructure in the platform that fits your business.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
@@ -105,8 +105,9 @@ export default function Home() {
           <h2>Not templates. Not tool worship. Actual systems built around your business.</h2>
           <p>
             You bring the messy reality: scattered tools, unclear handoffs, manual work,
-            missing documentation, client experience gaps, or a system idea that needs to
-            become real. I turn that into architecture, then implementation.
+            missing documentation, client experience gaps, or an internal tool idea that
+            needs to become real. I turn that into architecture, implementation, SOPs,
+            and a handoff your team can use.
           </p>
         </div>
         <div className="path-grid">
@@ -150,7 +151,7 @@ export default function Home() {
       <section className="dark-panel modules-panel">
         <div className="section-intro">
           <p className="eyebrow">Buildout Lanes</p>
-          <h2>Choose the system you need built, not the platform you think you need.</h2>
+          <h2>Choose the business system you need built. The platform comes after the architecture.</h2>
         </div>
         <div className="module-cloud">
           {modules.map((module) => (

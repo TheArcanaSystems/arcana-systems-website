@@ -41,7 +41,7 @@
         <div class="intake-heading">
           <p class="eyebrow">Guided Systems Assessment</p>
           <h1>Tell me what your business actually needs.</h1>
-          <p>Use this as a polished application, not a test. Your answers create a suggested buildout map and give me the context to design the exact system your business needs.</p>
+          <p>Use this as a polished application, not a test. Your answers create a suggested buildout map and give me the context to scope the right audit, custom buildout, full architecture, or retainer path.</p>
         </div>
 
         <div class="assessment-layout">
@@ -73,6 +73,13 @@
                   <input id="company-name" name="company_name" type="text" autocomplete="organization" required>
                 </div>
                 <div class="field">
+                  <label for="business-website">Website or main social link</label>
+                  <input id="business-website" name="business_website" type="url" autocomplete="url" placeholder="https://">
+                </div>
+              </div>
+
+              <div class="field-row three-column">
+                <div class="field">
                   <label for="business-stage">Business stage</label>
                   <select id="business-stage" name="business_stage">
                     <option value="">Select one</option>
@@ -81,6 +88,29 @@
                     <option>Scaling a team or service delivery model</option>
                     <option>Pivoting, recovering, or reorganizing</option>
                     <option>Established and ready for stronger architecture</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="team-size">Team size</label>
+                  <select id="team-size" name="team_size">
+                    <option value="">Select one</option>
+                    <option>Solo founder</option>
+                    <option>2-5 people</option>
+                    <option>6-15 people</option>
+                    <option>16-50 people</option>
+                    <option>50+ people</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="revenue-stage">Revenue / operating stage</label>
+                  <select id="revenue-stage" name="revenue_stage">
+                    <option value="">Select one</option>
+                    <option>Pre-revenue or validating</option>
+                    <option>Revenue exists but operations are messy</option>
+                    <option>Consistent revenue and ready to systemize</option>
+                    <option>Scaling delivery or team capacity</option>
+                    <option>Established and optimizing infrastructure</option>
+                    <option>Prefer not to say</option>
                   </select>
                 </div>
               </div>
@@ -93,6 +123,46 @@
                 <div class="field">
                   <label for="contact-email">Email <span aria-hidden="true">*</span></label>
                   <input id="contact-email" name="contact_email" type="email" autocomplete="email" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Scope, Timeline, and Fit</legend>
+              <div class="field-row three-column">
+                <div class="field">
+                  <label for="timeline">Ideal timeline</label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select one</option>
+                    <option>As soon as possible</option>
+                    <option>Within 30 days</option>
+                    <option>1-3 months</option>
+                    <option>3-6 months</option>
+                    <option>Exploring options</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="budget-range">Budget comfort range</label>
+                  <select id="budget-range" name="budget_range">
+                    <option value="">Select one</option>
+                    <option>Under $1,000 - likely audit first</option>
+                    <option>$1,000-$3,500</option>
+                    <option>$3,500-$8,500</option>
+                    <option>$8,500-$15,000</option>
+                    <option>$15,000+ for full architecture</option>
+                    <option>Need help understanding scope</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="support-path">Likely support path</label>
+                  <select id="support-path" name="support_path">
+                    <option value="">Select one</option>
+                    <option>Paid systems audit first</option>
+                    <option>Focused custom buildout</option>
+                    <option>Full architecture implementation</option>
+                    <option>Monthly systems retainer</option>
+                    <option>Not sure yet</option>
+                  </select>
                 </div>
               </div>
             </fieldset>
@@ -149,6 +219,17 @@
                 </div>
               </div>
 
+              <div class="field-row two-column">
+                <div class="field">
+                  <label for="current-system-notes">Where does the current system live?</label>
+                  <textarea id="current-system-notes" name="current_system_notes" rows="4" placeholder="Example: leads in HubSpot, delivery in ClickUp, files in Drive, invoices in Stripe, SOPs scattered across Notion and docs..."></textarea>
+                </div>
+                <div class="field">
+                  <label for="access-concerns">Access, privacy, or compliance concerns</label>
+                  <textarea id="access-concerns" name="access_concerns" rows="4" placeholder="Example: client data, HIPAA-adjacent workflows, contractor access, financial records, permissions, legal review..."></textarea>
+                </div>
+              </div>
+
               <div class="field-row">
                 <label>What concerns should I know about?</label>
                 <div class="choice-grid compact">
@@ -169,7 +250,7 @@
               <div class="field-row">
                 <label for="brand-assets">Upload logo or brand assets</label>
                 <input id="brand-assets" name="brand_assets" type="file" accept=".png,.jpg,.jpeg,.svg,.pdf" multiple>
-                <p class="form-note">Upload your logo, brand guide, colors, or screenshots that would help with the build. Up to 3 files, 3 MB each.</p>
+                <p class="form-note">Upload your logo, brand guide, colors, or screenshots that would help with the build. Up to 3 files, 3 MB each. If upload fails, submit the form anyway and I will request assets during scoping.</p>
               </div>
             </fieldset>
 
@@ -189,9 +270,9 @@
           <aside class="recommendation-card" aria-live="polite">
             <p class="eyebrow">Suggested Buildout Map</p>
             <h2>Your recommended areas will appear here.</h2>
-            <p>Select the areas that apply and this guide will suggest a starting architecture map for review.</p>
+            <p>Select the areas that apply and this guide will suggest a starting architecture map. This is a guide, not a mandatory bundle.</p>
             <ul id="recommendation-list"></ul>
-            <strong id="recommendation-total">Estimated starting project floor: $0</strong>
+            <strong id="recommendation-total">Suggested starting project floor: $0</strong>
             <a class="btn btn-ghost" href="pricing.html#modules">Browse buildout lanes</a>
           </aside>
         </div>

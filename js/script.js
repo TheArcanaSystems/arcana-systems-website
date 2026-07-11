@@ -100,12 +100,12 @@ function updateRecommendations() {
     selectedModules.forEach((name) => {
       const module = moduleCatalog[name];
       const item = document.createElement("li");
-      item.innerHTML = `<span>${module.number}</span><strong>${name}</strong><small>${module.focus} - starts at ${formatCurrency(module.price)}</small>`;
+      item.innerHTML = `<span>${module.number}</span><strong>${name}</strong><small>${module.focus} - suggested starting floor ${formatCurrency(module.price)}</small>`;
       recommendationList.append(item);
     });
   }
 
-  recommendationTotal.textContent = `Estimated starting project floor: ${formatCurrency(total)}`;
+  recommendationTotal.textContent = `Suggested starting project floor: ${formatCurrency(total)}`;
 
   if (recommendedModules instanceof HTMLInputElement) {
     recommendedModules.value = selectedModules.join(", ");

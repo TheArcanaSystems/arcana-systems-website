@@ -1086,6 +1086,11 @@ ul {
   gap: 1rem;
 }
 
+.three-column {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .audit-form label {
   color: #fff;
   font-size: 0.76rem;
@@ -1678,6 +1683,7 @@ ul {
   .method-trio,
   .about-grid,
   .two-column,
+  .three-column,
   .experience-steps {
     grid-template-columns: 1fr;
   }
