@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { AUDIT_CHECKOUT_URL, AUDIT_PRICE, BUILD_STARTING_INVESTMENT } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pricing" },
   title: "Arcana Build™ — Systems Implementation | The Arcana Systems",
   description:
     "Scoped systems implementation for founders ready to turn their Arcana Audit architecture into connected workflows, SOPs, automation, portals, dashboards, and operating infrastructure.",
