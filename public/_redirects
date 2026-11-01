@@ -1,0 +1,10 @@
+/index.html / 308
+/pricing.html /pricing 308
+/services /pricing 308
+/services.html /pricing 308
+/about.html /about 308
+/contact.html /contact 308
+/audit.html /audit 308
+/blog /method 308
+/blog/* /method 308
+/products/* /audit 308
