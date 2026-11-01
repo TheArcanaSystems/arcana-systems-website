@@ -21,9 +21,6 @@ export const metadata: Metadata = {
     "Arcana Build",
     "ArcanaOS",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     url: "https://thearcanasystems.com/",
