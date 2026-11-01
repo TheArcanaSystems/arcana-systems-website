@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -7,6 +8,10 @@ import {
   AUDIT_PRICE,
   BUILD_STARTING_INVESTMENT,
 } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const pressureSignals = [
   "Your tools hold information. You hold the context.",
