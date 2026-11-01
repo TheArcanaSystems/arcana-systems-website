@@ -1,231 +1,233 @@
-const buildoutPaths = [
-  {
-    title: "Systems Audit",
-    copy: "A paid diagnostic that maps your workflows, tools, bottlenecks, risks, and highest-leverage next build.",
-  },
-  {
-    title: "Custom Buildout",
-    copy: "A scoped CRM, portal, SOP hub, dashboard, automation layer, internal tool, or SaaS workflow built around your business.",
-  },
-  {
-    title: "Architecture Retainer",
-    copy: "Ongoing systems stewardship for founders who need maintenance, documentation, refinement, and new build support.",
-  },
+import type { Metadata } from "next";
+import Link from "next/link";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import {
+  ARCANA_OS_PHASES,
+  AUDIT_CHECKOUT_URL,
+  AUDIT_PRICE,
+  BUILD_STARTING_INVESTMENT,
+} from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const pressureSignals = [
+  "Your tools hold information. You hold the context.",
+  "Client handoffs trigger another round of chasing.",
+  "Your team needs answers that only exist in your head.",
+  "Growth adds work faster than it adds capacity.",
 ];
 
-const signals = [
-  "Client delivery lives across too many places.",
-  "Your CRM does not match how you actually sell or serve.",
-  "SOPs are missing, outdated, or ignored.",
-  "Reporting is scattered, manual, or impossible to trust.",
-  "You need a custom internal tool or SaaS workflow, not another generic app.",
-];
-
-const method = [
-  ["Read", "Understand the real operating pattern before choosing tools."],
-  ["Architect", "Map workflows, data, ownership, automations, and handoffs."],
-  ["Build", "Implement the system inside the platform that fits the business."],
-  ["Steward", "Refine, document, maintain, and expand the system over time."],
-];
-
-const modules = [
-  "CRM Architecture",
-  "Client Portals",
-  "SOP Libraries",
-  "Dashboards",
-  "Workflow Automation",
-  "SaaS Foundations",
-  "Retainer Support",
-  "Full System Design",
-];
-
-const laneDetails = [
-  ["Audit", "Find the bottlenecks, risks, and highest-leverage build before choosing tools."],
-  ["Build", "Implement CRM, portals, dashboards, automations, SOP hubs, or internal systems."],
-  ["Document", "Deliver SOPs, handoff notes, permissions, and operating guidance."],
-  ["Steward", "Keep systems maintained, refined, and expanded as the business changes."],
-];
-
-const founderNotes = [
-  "Architecture before platform selection",
-  "Human judgment over generic automation",
-  "Documentation and handoff included",
+const auditOutcomes = [
+  ["01", "A clear diagnosis", "See the three primary constraints affecting how the business operates."],
+  ["02", "An architecture to build toward", "Understand the current state and the connected operation you need next."],
+  ["03", "A practical order of action", "Prioritize automation, documentation, and implementation through a 90-day roadmap."],
 ];
 
 export default function Home() {
   return (
-    <main className="arcana-home">
-      <div className="atmosphere" aria-hidden="true">
-        <span className="smoke smoke-one" />
-        <span className="smoke smoke-two" />
-        <span className="smoke smoke-three" />
-        <span className="stardust stardust-one" />
-        <span className="stardust stardust-two" />
-        <span className="petal petal-one" />
-        <span className="petal petal-two" />
-        <span className="petal petal-three" />
-      </div>
+    <>
+      <SiteHeader />
+      <main>
+        <section className="hero-section">
+          <div className="site-shell hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow">Operations & Systems Architecture</p>
+              <h1>Your business has outgrown being held together by you.</h1>
+              <p className="hero-lead">
+                We turn scattered tools, manual handoffs, and knowledge held in your head
+                into a business operating system your team can actually run.
+              </p>
+              <div className="button-row">
+                <a className="button button-gold" href={AUDIT_CHECKOUT_URL}>
+                  Begin your Arcana Audit™ <span aria-hidden="true">↗</span>
+                </a>
+                <Link className="text-link" href="/method">Discover the method</Link>
+              </div>
+              <p className="microcopy">{AUDIT_PRICE} USD · One-time diagnostic · Human-reviewed dossier</p>
+            </div>
 
-      <header className="site-header" aria-label="The Arcana Systems">
-        <a className="brand-lockup" href="/" aria-label="The Arcana Systems home">
-          <span>The Arcana</span>
-          <small>Systems</small>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="/services.html">Services</a>
-          <a href="/pricing.html">Buildouts</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-        <a className="header-cta" href="/contact.html#interest=Custom%20systems%20assessment">
-          Start Assessment
-        </a>
-      </header>
-
-      <section className="hero-section">
-        <div className="hero-art" aria-hidden="true">
-          <img src="/images/tas-brand-hero.png" alt="" />
-        </div>
-        <div className="hero-copy">
-          <p className="eyebrow">Platform-agnostic systems architecture</p>
-          <h1>Custom systems architecture and implementation for businesses ready to move like magic.</h1>
-          <p className="hero-lead">
-            Choose a focused buildout, start with a systems audit, or retain ongoing support.
-            The Arcana Systems audits, architects, builds, documents, and hands over custom
-            operational infrastructure in the platform that fits your business.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
-              Start the Guided Assessment
-            </a>
-            <a className="button button-secondary" href="/pricing.html">
-              Explore Custom Buildouts
-            </a>
+            <div className="hero-visual" aria-label="Arcana Audit visual reference">
+              <div className="visual-frame">
+                <img
+                  src="/images/arcana-reference-hero.png"
+                  alt="The Arcana Systems visual identity and audit reference"
+                />
+              </div>
+              <div className="visual-caption">
+                <span>Begin with clarity.</span>
+                <strong>Build with intention.</strong>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="oracle-strip" aria-label="What The Arcana Systems builds">
-        <span>Audit</span>
-        <span>Architecture</span>
-        <span>Implementation</span>
-        <span>Retainer</span>
-      </section>
+        <section className="statement-band">
+          <div className="site-shell statement-inner">
+            <span>Strategy into structure</span>
+            <i>✦</i>
+            <span>Knowledge into systems</span>
+            <i>✦</i>
+            <span>Growth with less dependency</span>
+          </div>
+        </section>
 
-      <section className="section-panel intro-panel">
-        <div className="section-intro">
-          <p className="eyebrow">The Work</p>
-          <h2>Not templates. Not tool worship. Actual systems built around your business.</h2>
-          <p>
-            You bring the messy reality: scattered tools, unclear handoffs, manual work,
-            missing documentation, client experience gaps, or an internal tool idea that
-            needs to become real. I turn that into architecture, implementation, SOPs,
-            and a handoff your team can use.
-          </p>
-        </div>
-        <div className="path-grid">
-          {buildoutPaths.map((path) => (
-            <article key={path.title} className="glass-card">
-              <span aria-hidden="true">✦</span>
-              <h3>{path.title}</h3>
-              <p>{path.copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="section section-ivory">
+          <div className="site-shell split-layout">
+            <div className="section-heading">
+              <p className="eyebrow">The pattern beneath the pressure</p>
+              <h2>A capable founder. An operation that asks too much.</h2>
+              <p>
+                The work is getting done. But the business still relies on you to remember,
+                translate, approve, route, and follow up. We diagnose the structure creating
+                that pressure before adding another tool or workaround.
+              </p>
+            </div>
+            <div className="signal-stack">
+              {pressureSignals.map((signal) => <p key={signal}>{signal}</p>)}
+            </div>
+          </div>
+        </section>
 
-      <section className="dark-panel split-panel">
-        <div>
-          <p className="eyebrow">When You Need This</p>
-          <h2>Your business is asking for structure.</h2>
-        </div>
-        <ul className="signal-list">
-          {signals.map((signal) => (
-            <li key={signal}>{signal}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="section section-plum">
+          <div className="site-shell">
+            <div className="section-heading narrow">
+              <p className="eyebrow eyebrow-light">The first move / Arcana Audit™</p>
+              <h2>See the whole picture. Know what to build.</h2>
+              <p>
+                A focused diagnostic of six connected areas of your business, translated
+                into a decision-ready 16-page dossier.
+              </p>
+            </div>
 
-      <section className="section-panel method-panel">
-        <div className="section-intro">
-          <p className="eyebrow">The Arcana Method</p>
-          <h2>Read the system. Architect the flow. Build what holds.</h2>
-          <p className="section-kicker">
-            A practical sequence for turning operational fog into usable architecture:
-            understand the pattern, map the system, implement it cleanly, then keep it
-            alive as the business changes.
-          </p>
-        </div>
-        <ol className="method-track">
-          {method.map(([title, copy]) => (
-            <li key={title}>
-              <span>{title}</span>
-              <p>{copy}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+            <div className="offer-highlight">
+              <div>
+                <span className="offer-kicker">Founding Client Offer</span>
+                <h3>Arcana Audit™</h3>
+              </div>
+              <div className="price-lockup">
+                <strong>{AUDIT_PRICE}</strong>
+                <span>USD / one time</span>
+              </div>
+              <a className="button button-ivory" href={AUDIT_CHECKOUT_URL}>
+                Start my Audit <span aria-hidden="true">↗</span>
+              </a>
+            </div>
 
-      <section className="dark-panel modules-panel">
-        <div className="section-intro">
-          <p className="eyebrow">Buildout Lanes</p>
-          <h2>Choose the business system you need built. The platform comes after the architecture.</h2>
-        </div>
-        <div className="lane-detail-grid" aria-label="What each buildout can include">
-          {laneDetails.map(([title, copy]) => (
-            <article key={title}>
-              <span>{title}</span>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-        <div className="module-cloud">
-          {modules.map((module) => (
-            <a key={module} href="/pricing.html">
-              {module}
+            <div className="three-card-grid">
+              {auditOutcomes.map(([number, title, copy]) => (
+                <article className="editorial-card" key={number}>
+                  <span>{number}</span>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="center-link">
+              <Link className="text-link text-link-light" href="/audit">
+                Explore exactly what’s inside the Audit
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-mist">
+          <div className="site-shell">
+            <div className="section-heading narrow">
+              <p className="eyebrow">The operating system behind the work</p>
+              <h2>Meet ArcanaOS™.</h2>
+              <p>
+                One connected method—from understanding the business to building the
+                infrastructure that supports it.
+              </p>
+            </div>
+
+            <div className="phase-grid">
+              {ARCANA_OS_PHASES.map((phase) => (
+                <article key={phase.number} className="phase-card">
+                  <div className="phase-topline">
+                    <span>{phase.number}</span>
+                    <strong>{phase.title}</strong>
+                  </div>
+                  <h3>{phase.heading}</h3>
+                  <p>{phase.copy}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="center-link">
+              <Link className="text-link" href="/method">Explore ArcanaOS™</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-ivory">
+          <div className="site-shell build-feature">
+            <div className="section-heading">
+              <p className="eyebrow">From diagnosis to implementation</p>
+              <h2>A roadmap is the beginning. We build what comes next.</h2>
+              <p>
+                Arcana Build™ brings the prescribed architecture to life: connected
+                workflows, usable documentation, purposeful automation, and leadership
+                visibility across the business.
+              </p>
+              <p className="investment-note">
+                Implementation starts at <strong>{BUILD_STARTING_INVESTMENT}</strong>.
+              </p>
+              <Link className="button button-plum" href="/pricing">
+                Explore Arcana Build™
+              </Link>
+            </div>
+
+            <div className="build-panel">
+              <span className="offer-kicker">Architecture before software</span>
+              <h3>Your tools should serve the business.</h3>
+              <p>
+                We assess what to retain, connect, consolidate, or replace. Technology is
+                part of the implementation—not the starting point for the strategy.
+              </p>
+              <p className="credit-note">
+                100% of the {AUDIT_PRICE} Audit fee is credited toward a Build initiated
+                within 30 days.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section founder-strip">
+          <div className="site-shell founder-grid">
+            <div className="founder-photo">
+              <img src="/images/cnelson-headshot-clean.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
+            </div>
+            <div className="founder-copy">
+              <p className="eyebrow eyebrow-light">Founder-led architecture</p>
+              <h2>Systems built with operational judgment, not software enthusiasm.</h2>
+              <p>
+                The Arcana Systems is led by Caitilin Nelson, an operations and systems
+                architect with two decades of experience across client service, finance,
+                executive support, administration, people operations, and business systems.
+              </p>
+              <Link className="text-link text-link-light" href="/about">Meet the founder</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="final-cta">
+          <div className="site-shell final-cta-inner">
+            <p className="eyebrow">Your next chapter starts with clarity</p>
+            <h2>Build the business. Stop being the system.</h2>
+            <p>Find what is holding your operations back—and what to build next.</p>
+            <a className="button button-gold" href={AUDIT_CHECKOUT_URL}>
+              Begin your Arcana Audit™ <span aria-hidden="true">↗</span>
             </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="founder-panel">
-        <div className="founder-image">
-          <img src="/images/cnelson-headshot-clean.png" alt="Caitilin Nelson, founder of The Arcana Systems" />
-        </div>
-        <div className="founder-copy">
-          <p className="eyebrow">Founder-Led</p>
-          <h2>Built personally, with the judgment your operations deserve.</h2>
-          <p>
-            I lead the assessment, architecture, and implementation so the system is not
-            merely pretty. It has to work for your real clients, your real tools, and your
-            real capacity.
-          </p>
-          <ul className="founder-notes">
-            {founderNotes.map((note) => (
-              <li key={note}>{note}</li>
-            ))}
-          </ul>
-          <a className="text-link" href="/about.html">Read Caitilin&apos;s story</a>
-        </div>
-      </section>
-
-      <section className="final-cta">
-        <p className="eyebrow">Start Here</p>
-        <h2>Tell me what your business actually needs.</h2>
-        <p>
-          The guided assessment is a scoping tool, not a forced bundle. Share your tools,
-          pain points, concerns, goals, and logo so I can recommend the right build.
-        </p>
-        <a className="button button-primary" href="/contact.html#interest=Custom%20systems%20assessment">
-          Start the Guided Assessment
-        </a>
-      </section>
-
-      <footer>
-        <span>The Arcana Systems</span>
-        <span>Building systems that move like magic</span>
-        <a href="mailto:hello@thearcanasystems.com">hello@thearcanasystems.com</a>
-      </footer>
-    </main>
+            <span className="microcopy">{AUDIT_PRICE} USD · One-time diagnostic</span>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

@@ -1,85 +1,112 @@
-# The Arcana Systems Website
+# The Arcana Systems™ Website
 
-Production-ready static website for [thearcanasystems.com](https://thearcanasystems.com), focused on The Arcana Systems offer catalog, direct checkout, and custom inquiry flow.
+Canonical production website for **https://thearcanasystems.com**.
 
-## Structure
+## Commercial Architecture
+
+The website has one primary sales path:
+
+```
+Arcana Audit™ — $497
+        ↓
+Paid Business Systems Diagnostic
+        ↓
+Human-reviewed 16-page dossier
+        ↓
+Arcana Build™ — implementation from $10,000
+```
+
+**ArcanaOS™** is the operating methodology behind both engagements. It is not a separate software product or subscription.
+
+## Canonical Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Primary conversion homepage |
+| `/audit` | Arcana Audit™ offer and direct checkout |
+| `/pricing` | Arcana Build™ implementation |
+| `/method` | ArcanaOS™ methodology |
+| `/about` | Founder and consultancy positioning |
+| `/contact` | Build inquiry for audited / implementation-ready prospects |
+
+Legacy `.html`, product, blog, and services URLs are redirected in `worker/index.ts` so old links do not expose competing offer models.
+
+## Live Purchase Flow
+
+The Arcana Audit™ checkout URL is stored once in:
+
+```
+lib/site.ts
+```
+
+Current live Stripe Payment Link:
+
+```
+https://buy.stripe.com/dRmeVf2uC7Hn9se3Pq2ZO03
+```
+
+Stripe redirects successful payments to the canonical Jotform Business Systems Diagnostic and passes the Checkout Session ID for paid-order reconciliation.
+
+Do not hard-code alternate Audit prices or checkout links elsewhere in the site.
+
+## Application Structure
 
 ```text
-arcana-systems-website/
-|-- index.html
-|-- css/
-|   `-- style.css
-|-- js/
-|   `-- script.js
-|-- images/
-|   |-- arcana-systems-logo.png
-|   |-- cnelson-headshot.png
-|   |-- logo-dark.png
-|   `-- logo-light.png
-|-- .gitignore
-|-- README.md
-`-- wrangler.toml
+app/
+  page.tsx
+  audit/page.tsx
+  pricing/page.tsx
+  method/page.tsx
+  about/page.tsx
+  contact/page.tsx
+  services/page.tsx     # redirect compatibility
+  layout.tsx
+  globals.css
+  robots.ts
+  sitemap.ts
+
+components/
+  SiteHeader.tsx
+  SiteFooter.tsx
+  BuildInquiryForm.tsx
+
+lib/
+  site.ts               # commercial constants + shared methodology data
+
+worker/
+  index.ts               # Vinext entry + legacy URL redirects
 ```
 
-## Purchase And Intake Flow
+The repository still contains historical static files under the root and `public/` for compatibility/history. They are **not** the commercial source of truth.
 
-The free Arcana Audit links to the intake form. Productized paid offers link directly from the website offer cards to secure Stripe Checkout:
+## Non-Negotiable Offer Rules
 
-- Invoice & Payment Automation Kit
-- Client Portal OS Template
-- CEO Command Center Dashboard
-- SOP Snap Kit
-- AI SOP Builder Prompt Pack
+- Arcana Audit™ is the front door.
+- Public Audit price: **$497 one time**.
+- Arcana Build™ starts at **$10,000** and is scoped separately.
+- 100% of the Audit fee is credited toward a Build initiated within 30 days.
+- Do not advertise the retired $997 intensive, $8,500 build floor, 22-module menu, digital-product ladder, or monthly retainer as the primary sales model.
+- Do not bypass the paid Audit with a free diagnostic or generic guided assessment.
+- Human QA remains mandatory before an Audit dossier can be delivered.
 
-The inquiry form is reserved for custom implementation quotes, buyer questions, and tailored next steps.
+## Build / Hosting
 
-## TAS CRM Intake
+This codebase uses Next.js 16 + React 19 through Vinext / Vite and a Cloudflare-compatible Worker entry.
 
-The inquiry form posts to:
+Configuration:
+- `package.json`
+- `vite.config.ts`
+- `worker/index.ts`
+- `.openai/hosting.json`
 
-```html
-https://crm.thearcanasystems.com/api/intake
-```
+## Release QA
 
-Required client-side fields:
+Before promoting a website release:
 
-- Offer Interest
-- Business Name
-- Contact Name
-- Email
-
-On successful submission, the page records the inquiry in TAS CRM and shows confirmation copy.
-
-## Cloudflare Pages Setup
-
-1. Create or open the GitHub repository `arcana-systems-website`.
-2. Push this project to the `main` branch.
-3. In Cloudflare, open **Workers & Pages**.
-4. Click **Create application**.
-5. Choose **Pages** and **Connect to Git**.
-6. Select the `arcana-systems-website` repository.
-7. Use these build settings:
-   - Framework preset: `None`
-   - Build command: leave blank
-   - Build output directory: `/`
-8. Deploy.
-9. Add the custom domain `thearcanasystems.com` under the Pages project's **Custom domains** tab.
-10. Confirm SSL is active and the domain resolves to the Pages deployment.
-
-## Local Preview
-
-Run a simple static server from the project root:
-
-```bash
-python -m http.server 4173
-```
-
-Then open `http://localhost:4173`.
-
-## Production Checks
-
-- Verify all nav links scroll to their sections.
-- Confirm productized offer buttons route directly to the correct secure checkout URL.
-- Submit a test CRM inquiry and confirm the success message appears.
-- Run Lighthouse for accessibility, performance, best practices, and SEO.
-- Test mobile navigation at narrow widths.
+1. Verify `/`, `/audit`, `/pricing`, `/method`, `/about`, and `/contact`.
+2. Confirm every Audit CTA resolves to the live $497 Stripe Payment Link.
+3. Confirm legacy `.html` and `/products/*` URLs redirect to canonical routes.
+4. Test the Build inquiry against `https://crm.thearcanasystems.com/api/intake`.
+5. Check mobile navigation, CTA visibility, form validation, and footer year.
+6. Verify canonical metadata, sitemap, robots, Open Graph, and social share image.
+7. Do not publish if the site exposes old pricing or a competing sales ladder.
