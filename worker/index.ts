@@ -29,8 +29,24 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname === "/index.html") {
-      return Response.redirect(new URL("/", url.origin), 308);
+    const legacyRedirects: Record<string, string> = {
+      "/index.html": "/",
+      "/pricing.html": "/pricing",
+      "/services.html": "/pricing",
+      "/about.html": "/about",
+      "/contact.html": "/contact",
+      "/blog": "/method",
+      "/blog/index.html": "/method",
+      "/blog/what-is-operational-architecture.html": "/method",
+    };
+
+    const legacyTarget = legacyRedirects[url.pathname];
+    if (legacyTarget) {
+      return Response.redirect(new URL(legacyTarget, url.origin), 308);
+    }
+
+    if (url.pathname.startsWith("/products/")) {
+      return Response.redirect(new URL("/audit", url.origin), 308);
     }
 
     if (url.pathname === "/_vinext/image") {
