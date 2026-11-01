@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { AUDIT_CHECKOUT_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About The Arcana Systems™ | Operations & Systems Architecture",
   description:
     "The Arcana Systems is a founder-led operations and systems architecture consultancy built to turn operational complexity into usable business infrastructure.",
