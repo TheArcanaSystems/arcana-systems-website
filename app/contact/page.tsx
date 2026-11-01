@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { AUDIT_CHECKOUT_URL, AUDIT_PRICE, BUSINESS_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact The Arcana Systems™",
   description:
     "Start with the Arcana Audit™ or contact The Arcana Systems about an implementation based on your existing Audit findings.",
