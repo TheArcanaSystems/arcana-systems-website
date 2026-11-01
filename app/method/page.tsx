@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { ARCANA_OS_PHASES, AUDIT_CHECKOUT_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/method" },
   title: "ArcanaOS™ — The Arcana Systems Method",
   description:
     "ArcanaOS™ is The Arcana Systems methodology for assessing, architecting, building, automating, optimizing, and scaling founder-led operations.",
