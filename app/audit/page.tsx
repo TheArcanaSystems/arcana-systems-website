@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { ARCANA_DOMAINS, AUDIT_CHECKOUT_URL, AUDIT_PRICE, BUILD_STARTING_INVESTMENT } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/audit" },
   title: "Arcana Audit™ — $497 Business Systems Diagnostic | The Arcana Systems",
   description:
     "A six-domain business systems diagnostic and human-reviewed 16-page dossier for founders who need clarity before investing in tools, automation, or implementation.",
